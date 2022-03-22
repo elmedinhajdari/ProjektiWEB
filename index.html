@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <title>BuzzHosting | Internet Hosting</title>
+</head>
+
+<body>
+
+    <!--Nav Bar-->
+    <div id="nav1" class="navbar">
+        <div class="container flex">
+            <h1 class="logo">Buzz Hosting</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Hosting</a></li>
+                    <li><a href="aboutus.html">About us</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Showcase -->
+    <section class="showcase">
+        <div class="container grid">
+            <div class="showcase-text">
+                <h1>Quality internet and hosting</h1>
+                <p>We have the best technology and services on internet<br> hosting and ddos protection.</p>
+                <a href="features.html" class="btn btn-outline">Read more</a>
+            </div>
+            <div class="showcase-form card">
+                <h2>Register</h2>
+                <form onsubmit="return validation(this)">
+                    <div class="form-control">
+                        <input id="emri" type="text" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-control">
+                        <input id="mbiemri" type="text" name="lastname" placeholder="Lastname" required>
+                    </div>
+                    <div class="form-control">
+                        <input id="email" type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <input type="submit" value="Apply" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <div class="between">
+    <section class="stats">
+        <div class="container">
+            <h3 class="stats-heading text-center my-1">
+                This is our most recent work,<br>with modern architecture and
+                scaling
+            </h3>
+            <div class="grid grid-3 text-center my-4">
+                <div>
+                    <i class="fas fa-user fa-3x"></i>
+                    <h3>1,413,941</h3>
+                    <p class="text-secondary ">Clients</p>
+                </div>
+                <div>
+                    <i class="fas fa-city fa-3x"></i>
+                    <h3>92</h3>
+                    <p class="text-secondary ">Cities</p>
+                </div>
+                <div>
+                    <i class="fas fa-project-diagram fa-3x"></i>
+                    <h3>2,349,555</h3>
+                    <p class="text-secondary ">Projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--CLI-->
+    <section class="cli">
+        <div class="container grid text-center">
+
+            <div class="card hover1">
+                <h3>TV Pack</h3>
+                <h1 class="test1">8€/Month</h1>
+                <ul>
+                    <li>300 TV Channels</li>
+                    <li class="underline"></li>
+                    <li>4K Resiver</li>
+                    <li class="underline"></li>
+                    <li>Best Channels</li>
+                    <li class="underline"></li>
+                    <li>Sportive Channels</li>
+                    <li class="underline"></li>
+                    <li>Professional Support</li>
+                </ul>
+                <a href="javascript:void(0);"><h1 class="order">Order now</h1></a>
+            </div>
+            <div class="card hover1">
+                <h3>TV+Internet Pack</h3>
+                <h1 class="test1">14€/Month</h1>
+                <ul>
+                    <li>300 TV Channels</li>
+                    <li class="underline"></li>
+                    <li>4K Resiver</li>
+                    <li class="underline"></li>
+                    <li>100 Mbp/s DW</li>
+                    <li class="underline"></li>
+                    <li>40 Mbp/s DW</li>
+                    <li class="underline"></li>
+                    <li>Best Channels</li>
+                    <li class="underline"></li>
+                    <li>Sportive Channels</li>
+                    <li class="underline"></li>
+                    <li>Professional Support</li>
+                </ul>
+                <a href="javascript:void(0);"><h1 class="order">Order now</h1></a>
+            </div>
+            <div class="card hover1">
+                <h3>Cyber Power Pack</h3>
+                <h1 class="test1">22€/Month</h1>
+                <ul>
+
+
+                    <li>TV Pack</li>
+                    <li class="underline"></li>
+                    <li>4K Resiver</li>
+                    <li class="underline"></li>
+                    <li>500 Mbp/s DW</li>
+                    <li class="underline"></li>
+                    <li>100 Mbp/s UP</li>
+                    <li class="underline"></li>
+                    <li>Low Latency</li>
+                    <li class="underline"></li>
+                    <li>Netflix</li>
+                    <li class="underline"></li>
+                    <li>Professional Support</li>
+                </ul>
+                <a href="javascript:void(0);"><h1 class="order">Order now</h1></a>
+            </div>
+            <div class="card hover1">
+                <h3>Mega Power Pack</h3>
+                <h1 class="test1">30€/Month</h1>
+                <ul>
+                    <li>TV Pack</li>
+                    <li class="underline"></li>
+                    <li>1 Gbp/s DW</li>
+                    <li class="underline"></li>
+                    <li>250 Mbp/s UP</li>
+                    <li class="underline"></li>
+                    <li>Low Latency</li>
+                    <li class="underline"></li>
+                    <li>Free Netflix+Hulu</li>
+                    <li class="underline"></li>
+                    <li>Professional Support</li>
+                </ul>
+                <a href="javascript:void(0);"><h1 class="order">Order now</h1></a>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!--Cloud-->
+
+    <section class="cloud bg-primary mx-5">
+        <div class="container grid">
+            <div class="text-center">
+                <h2 class="lg">Extreme Hosting Servers</h2>
+                <p class="lead my-1"> Hosting servers like you've never seen. Fast efficient scalable</p>
+                <a href="features.html" class="btn btn-outline"> Read more</a>
+            </div>
+            <img src="images/cloud.png" alt="">
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark py-5">
+        <div class="container grid grid-3">
+            <div>
+                <h1>Buzz Hosting</h1>
+                <p>Copyright &copy; 2021</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Hosting</a></li>
+                    <li><a href="aboutus.html">About us</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a href="javascript:void(0);"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="javascript:void(0);"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="javascript:void(0);"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
