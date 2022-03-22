@@ -14,21 +14,8 @@
 </head>
 
 <body>
-
-    <!--Nav Bar-->
-    <div id="nav1" class="navbar">
-        <div class="container flex">
-            <h1 class="logo">Buzz Hosting</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="features.html">Hosting</a></li>
-                    <li><a href="aboutus.html">About us</a></li>
-                    <li><a href="login.html">Login</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+<?php include('include/header.php')  ?>
+  
 
     <!-- Showcase -->
     <section class="showcase">
@@ -36,19 +23,22 @@
             <div class="showcase-text">
                 <h1>Quality internet and hosting</h1>
                 <p>We have the best technology and services on internet<br> hosting and ddos protection.</p>
-                <a href="features.html" class="btn btn-outline">Read more</a>
+                <a href="features.php" class="btn btn-outline">Read more</a>
             </div>
             <div class="showcase-form card">
                 <h2>Register</h2>
                 <form onsubmit="return validation(this)">
                     <div class="form-control">
-                        <input id="emri" type="text" name="name" placeholder="Name" required>
+                        <input id="emri" type="text" name="name" placeholder="Username" required>
                     </div>
                     <div class="form-control">
-                        <input id="mbiemri" type="text" name="lastname" placeholder="Lastname" required>
+                        <input id="mbiemri" type="text" name="email" placeholder="Email" required>
                     </div>
                     <div class="form-control">
-                        <input id="email" type="email" name="email" placeholder="Email" required>
+                        <input id="password" type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-control">
+                        <input id="confirmpassword" type="password" name="password" placeholder="Confirm Password" required>
                     </div>
                     <input type="submit" value="Apply" class="btn btn-primary">
                 </form>
@@ -176,7 +166,7 @@
             <div class="text-center">
                 <h2 class="lg">Extreme Hosting Servers</h2>
                 <p class="lead my-1"> Hosting servers like you've never seen. Fast efficient scalable</p>
-                <a href="features.html" class="btn btn-outline"> Read more</a>
+                <a href="features.php" class="btn btn-outline"> Read more</a>
             </div>
             <img src="images/cloud.png" alt="">
         </div>
@@ -184,28 +174,8 @@
 
 
 
+    <?php include('include/footer.php')  ?>
 
-    <!-- Footer -->
-    <footer class="footer bg-dark py-5">
-        <div class="container grid grid-3">
-            <div>
-                <h1>Buzz Hosting</h1>
-                <p>Copyright &copy; 2021</p>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="features.html">Hosting</a></li>
-                    <li><a href="aboutus.html">About us</a></li>
-                </ul>
-            </nav>
-            <div class="social">
-                <a href="javascript:void(0);"><i class="fab fa-facebook fa-2x"></i></a>
-                <a href="javascript:void(0);"><i class="fab fa-instagram fa-2x"></i></a>
-                <a href="javascript:void(0);"><i class="fab fa-twitter fa-2x"></i></a>
-            </div>
-        </div>
-    </footer>
 
 
     <script src="js/script.js"></script>

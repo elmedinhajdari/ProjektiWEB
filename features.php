@@ -15,20 +15,7 @@
 
 <body>
 
-    <!--Nav Bar-->
-    <div id="nav1" class="navbar">
-        <div class="container flex">
-            <h1 class="logo">Buzz Hosting</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="features.html">Hosting</a></li>
-                    <li><a href="aboutus.html">About us</a></li>
-                    <li><a href="login.html">Login</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+<?php include('include/header.php')  ?>
 
 
     <!--Head-->
@@ -131,30 +118,11 @@
             </div>
         </div>
     </section>
-
+    
+    <?php include('include/footer.php')  ?>
     <script src="js/script.js"></script>
 
-    <!-- Footer -->
-    <footer class="footer bg-dark py-5">
-        <div class="container grid grid-3">
-            <div>
-                <h1>Buzz Hosting</h1>
-                <p>Copyright &copy; 2021</p>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="features.html">Hosting</a></li>
-                    <li><a href="aboutus.html">About us</a></li>
-                </ul>
-            </nav>
-            <div class="social">
-                <a href="javascript:void(0);"><i class="fab fa-facebook fa-2x"></i></a>
-                <a href="javascript:void(0);"><i class="fab fa-instagram fa-2x"></i></a>
-                <a href="javascript:void(0);"><i class="fab fa-twitter fa-2x"></i></a>
-            </div>
-        </div>
-    </footer>
+
 
 
 </body>
