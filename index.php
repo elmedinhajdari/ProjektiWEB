@@ -27,20 +27,20 @@
             </div>
             <div class="showcase-form card">
                 <h2>Register</h2>
-                <form onsubmit="return validation(this)">
+                <form method="post" action="results.php">
                     <div class="form-control">
-                        <input id="emri" type="text" name="name" placeholder="Username" required>
+                        <input id="username" type="text" name="username" placeholder="Username" required>
                     </div>
                     <div class="form-control">
-                        <input id="mbiemri" type="text" name="email" placeholder="Email" required>
+                        <input id="email" type="text" name="email" placeholder="Email" required>
                     </div>
                     <div class="form-control">
                         <input id="password" type="password" name="password" placeholder="Password" required>
                     </div>
                     <div class="form-control">
-                        <input id="confirmpassword" type="password" name="password" placeholder="Confirm Password" required>
+                        <input id="confirmpassword" type="password" name="confirmpassword" placeholder="Confirm Password" required>
                     </div>
-                    <input type="submit" value="Apply" class="btn btn-primary">
+                    <input type="submit" value="Register" class="btn btn-primary" name="register">
                 </form>
             </div>
         </div>
