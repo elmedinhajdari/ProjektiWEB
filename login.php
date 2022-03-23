@@ -32,7 +32,7 @@
 <div class="login py-5">
     <div class="showcase-form card">
         <h2>Login</h2>
-        <form method="post" action="login.php">
+        <form method="post" action="index.php">
             <?php include('errors.php');?>
             <div class="form-control">
                 <input id="e" type="text" name="username" placeholder="Username" required>
