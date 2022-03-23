@@ -1,4 +1,8 @@
-<?php include('server.php')?>
+<?php include('server.php');
+ include('include/logout.php');?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +20,9 @@
 
 <body>
 <?php include('include/header.php')  ?>
+
+
+
 <div class="content">
   	<!-- notification message -->
   	<?php if (isset($_SESSION['success'])) : ?>
@@ -28,6 +35,7 @@
       	</h3>
       </div>
   	<?php endif ?>
+
 
     <!-- logged in user information -->
     <?php  if (isset($_SESSION['username'])) : ?>
@@ -60,7 +68,7 @@
                     <div class="form-control">
                         <input type="password" name="password_2" placeholder="Confirm Password">
                     </div>
-                    <input type="submit" value="Register" class="btn btn-primary" name="register">
+                    <input type="submit"  name="register" value="Register" class="btn btn-primary" >
                 </form>
             </div>
         </div>

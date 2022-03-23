@@ -18,9 +18,8 @@ if (isset($_POST['register'])) {
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
   // Forma e validimit
-  if (empty($username)) { array_push($errors, "Username is required"); }
-  if (empty($email)) { array_push($errors, "Email is required"); }
-  if (empty($password_1)) { array_push($errors, "Password is required"); }
+  if (empty($username) || empty($email) || empty($password_1))  { array_push($errors, "You're missing something.."); }
+
   if ($password_1 != $password_2) {
 	array_push($errors, "The two passwords do not match");
   }
