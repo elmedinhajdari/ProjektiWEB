@@ -1,5 +1,7 @@
 <?php include('server.php');
-include('include/logout.php'); ?>
+include('include/logout.php');
+ ?>
+
 
 
 
@@ -46,7 +48,7 @@ include('include/logout.php'); ?>
                 </div>
 
 
-                
+
                 <div class="showcase-form card">
                     <?php if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
                     ?>
@@ -102,7 +104,9 @@ include('include/logout.php'); ?>
                     <div class="grid grid-3 text-center my-4">
                         <div>
                             <i class="fas fa-user fa-3x"></i>
-                            <h3>1,413,941</h3>
+                            <h3 ><?php $count = mysqli_query($db, "SELECT * FROM users");
+                            $data = mysqli_num_rows($count);
+                            echo $data ?></h3>
                             <p class="text-secondary ">Clients</p>
                         </div>
                         <div>
@@ -115,6 +119,7 @@ include('include/logout.php'); ?>
                             <h3>2,349,555</h3>
                             <p class="text-secondary ">Projects</p>
                         </div>
+                        
                     </div>
                 </div>
             </section>

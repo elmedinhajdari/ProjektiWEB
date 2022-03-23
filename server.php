@@ -11,8 +11,11 @@ $name = "";
 $surename = "";
 
 
+
 // lidhja ne databaze
 $db = mysqli_connect('localhost', 'root', '', 'registration');
+
+
 
 //-------------------------------------------------------------------------- Regjistro userin---------------------------------------------------------------------------------------
 if (isset($_POST['register'])) {
@@ -31,10 +34,19 @@ if (isset($_POST['register'])) {
 	array_push($errors, "The two passwords do not match");
   }
 
+  
+
+
+  
+
   // A eshte useri i krijuar ne databaze dhe nese po jep error
   $user_check_query = "SELECT * FROM users WHERE username='$username' OR email='$email' LIMIT 1";
   $result = mysqli_query($db, $user_check_query);
   $user = mysqli_fetch_assoc($result);
+
+
+ 
+  
   
   //nese useri egziston
   if ($user) { 
