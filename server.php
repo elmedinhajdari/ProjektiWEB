@@ -1,10 +1,15 @@
 <?php
 session_start();
 
-// inicializimi i variablave
+// inicializimi i variablave te regjistrimit apo te loginit
 $username = "";
 $email    = "";
 $errors = array(); 
+
+// inicializimi i variablave te aplikimit per pune
+$name = "";
+$surename = "";
+
 
 // lidhja ne databaze
 $db = mysqli_connect('localhost', 'root', '', 'registration');
