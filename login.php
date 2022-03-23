@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,14 +32,15 @@
 <div class="login py-5">
     <div class="showcase-form card">
         <h2>Login</h2>
-        <form onsubmit="return login(this)">
+        <form method="post" action="login.php">
+            <?php include('errors.php');?>
             <div class="form-control">
-                <input id="e" type="email" name="email" placeholder="Email" required>
+                <input id="e" type="text" name="username" placeholder="Username" required>
             </div>
             <div class="form-control">
                 <input id="p" type="password" name="password" placeholder="Password" required>
             </div>
-            <input  type="submit" value="Login" class="btn btn-primary">
+            <input name="login_user" type="submit" value="Login" class="btn btn-primary">
         </form>
     </div>
 </div>

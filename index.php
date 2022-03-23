@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,18 +28,19 @@
             </div>
             <div class="showcase-form card">
                 <h2>Register</h2>
-                <form method="post" action="results.php">
+                <form method="post" action="register.php">
+                <?php include('errors.php'); ?>
                     <div class="form-control">
-                        <input id="username" type="text" name="username" placeholder="Username" required>
+                        <input  type="text" name="username" value="<?php echo $username; ?>" placeholder="Username" >
                     </div>
                     <div class="form-control">
-                        <input id="email" type="text" name="email" placeholder="Email" required>
+                        <input  type="text" name="email" value="<?php echo $email; ?>" placeholder="Email"">
                     </div>
                     <div class="form-control">
-                        <input id="password" type="password" name="password" placeholder="Password" required>
+                        <input  type="password" name="password" placeholder="Password" >
                     </div>
                     <div class="form-control">
-                        <input id="confirmpassword" type="password" name="confirmpassword" placeholder="Confirm Password" required>
+                        <input type="password" name="confirmpassword" placeholder="Confirm Password">
                     </div>
                     <input type="submit" value="Register" class="btn btn-primary" name="register">
                 </form>
