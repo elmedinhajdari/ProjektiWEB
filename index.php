@@ -35,12 +35,6 @@ include('include/logout.php'); ?>
         <?php endif ?>
 
 
-        <!-- logged in user information -->
-        <?php if (isset($_SESSION['username'])) : ?>
-            <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-            <p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
-        <?php endif ?>
-    </div>
 
     <!-- Showcase -->
     <section class="showcase">
@@ -51,11 +45,24 @@ include('include/logout.php'); ?>
                 <a href="features.php" class="btn btn-outline">Read more</a>
             </div>
             <div class="showcase-form card">
-                <h2>Register</h2>
+            <?php if( isset($_SESSION['username']) && !empty($_SESSION['username']))
+                    {
+                    ?>
+                      <h2>User panel</h2>
+                    <?php }else{ ?>
+                        <h2>Register</h2>
+                    <?php } ?>
+                
                 <form method="post" action="index.php">
                     <?php include('errors.php'); ?>
                     <div class="form-control">
+                    <?php if( isset($_SESSION['username']) && !empty($_SESSION['username']))
+                    {
+                    ?>
+                      <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+                    <?php }else{ ?>
                         <input type="text" name="username" value="<?php echo $username; ?>" placeholder="Username">
+                    <?php } ?>
                     </div>
                     <div class="form-control">
                         <input type="text" name="email" value="<?php echo $email; ?>" placeholder="Email">

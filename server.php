@@ -17,6 +17,8 @@ if (isset($_POST['register'])) {
   $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
+ 
+
   // Forma e validimit
   if (empty($username) || empty($email) || empty($password_1))  { array_push($errors, "You're missing something.."); }
 
@@ -31,12 +33,8 @@ if (isset($_POST['register'])) {
   
   //nese useri egziston
   if ($user) { 
-    if ($user['username'] === $username) {
-      array_push($errors, "Username already exists");
-    }
-
-    if ($user['email'] === $email) {
-      array_push($errors, "email already exists");
+    if ($user['username'] === $username || $user['email'] === $email ) {
+      array_push($errors, "Username/Email already exists");
     }
   }
 
