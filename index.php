@@ -168,6 +168,7 @@ include('include/logout.php');
                             <h1 class="order">Order now</h1>
                         </a>
                     </div>
+                    
                     <div class="card hover1">
                         <h3>Cyber Power Pack</h3>
                         <h1 class="test1">22€/Month</h1>

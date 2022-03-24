@@ -175,8 +175,12 @@ img{
 
 
 .cli .grid{
-    grid-template-columns: repeat(4, 1fr);
+    /*grid-template-columns: repeat(4, 1fr);*/
+    display: flex;
+    flex-wrap: wrap;
     padding-top:  18px;
+
+    
 }
 
 
@@ -357,8 +361,8 @@ img{
 
 
     .cli .card{
-        justify-self: center;
-        width: 250px;
+        display: inline-block;
+        width: 60%;
     }
     .features-head,
     .features-sub-head,
@@ -397,9 +401,13 @@ img{
  padding: 10px;
 
 }
+
+
+
 .cli .card{
-    justify-self: center;
-    width: 250px;
+    display: inline-block;
+    width: 60%;
+
 }
 
 .showcase-form{
