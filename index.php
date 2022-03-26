@@ -63,8 +63,10 @@ include('include/logout.php');
                         {
                         ?>
                         
-                        <input type="file" id="myFile" name="filename">
-                        <input type="submit">
+
+                            
+                        <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+                       
                         
                         
                         <?php }else{ ?> 
