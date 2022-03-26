@@ -361,7 +361,7 @@ img{
 
 
     .cli .card{
-        display: inline-block;
+        grid-template-columns: repeat(1, 1fr);
         width: 60%;
     }
     .features-head,
@@ -398,6 +398,9 @@ img{
 
     text-align: center;
 }
+
+
+
 .navbar ul{
  padding: 10px;
 
@@ -406,10 +409,12 @@ img{
 
 
 .cli .card{
-    display: inline-block;
+    grid-template-columns: repeat(1, 1fr);
     width: 60%;
 
 }
+
+
 
 .showcase-form{
     width: 100%;
