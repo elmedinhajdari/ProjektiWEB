@@ -16,12 +16,12 @@ include('./include/logout.php');
 </head>
 
 <body>
+<?php include('include/header.php')  ?>
+ 
 
-  <?php include('include/header.php')  ?>
 
 
-  <div class="login py-5">
-    <div class="showcase-form card">
+    <div class="py-5">
       <form action="" method="POST">
       <center>
     <h1>Job applcation</h1>
@@ -40,7 +40,7 @@ include('./include/logout.php');
         <input type="submit" name="insert" value="Apply!" />
       </form>
     </div>
-  </div>
+
 
   <?php include('include/footer.php')  ?>
 </body>
