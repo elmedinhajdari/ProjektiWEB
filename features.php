@@ -1,3 +1,8 @@
+<?php include('server.php');
+include('include/logout.php');
+ include('errors.php');
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
