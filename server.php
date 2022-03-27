@@ -87,14 +87,24 @@ if (isset($_POST['login_user'])) {
         $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
         $results = mysqli_query($db, $query);
         if (mysqli_num_rows($results) == 1) {
-          $_SESSION['username'] = $username;
-          $_SESSION['success'] = "You are now logged in";
-          header('location: index.php');
+          $logged_in_user = mysqli_fetch_assoc($results);
+          if ($logged_in_user['user_role'] == 'admin') {
+    
+            $_SESSION['user'] = $logged_in_user;
+            $_SESSION['success']  = "You are now logged in";
+            header('location: index.php');		  
+          }else{
+            $_SESSION['user'] = $logged_in_user;
+            $_SESSION['success']  = "You are now logged in";
+    
+            header('location: index.php');
+          }
         }else {
-            array_push($errors, "Wrong username/password combination");
+          array_push($errors, "Wrong username/password combination");
         }
+      }
     }
-  }
+  
   
 
 
