@@ -97,4 +97,31 @@ if (isset($_POST['login_user'])) {
   }
   
 
+
+  //-------------------------------------------------- Job application -------------------------------------------------------------------------------
+
+if(isset($_POST['insert']))
+{
+  $name = $_POST['name'];
+  $surename = $_POST['surename'];
+  $email = $_POST['email'];
+
+
+
+
+
+
+  $query = "INSERT INTO jobappliaction (name, surename, email) VALUES ('$name' , '$surename', '$email')";
+  $query_run = mysqli_query($db, $query);
+
+  if($query_run){
+
+    echo '<script type="text/javascript"> alert("Data Saved");</script>';
+
+  }else{
+    echo '<script type="text/javascript"> alert("Data not Saved");</script>';
+  }
+  
+}
+
 ?>
