@@ -48,9 +48,8 @@ include('include/logout.php');
                 </div>
 
 
-
                 <div class="showcase-form card">
-                    <?php if (isset($_SESSION['username']) && !empty($_SESSION['username'] && $logged_in_user['user_role'] == 'user')) {
+                    <?php if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
                     ?>
                         <h2>User panel</h2>
                     <?php } else { ?>
@@ -62,13 +61,13 @@ include('include/logout.php');
                         <?php if( isset($_SESSION['username']))
                         {
                         ?>
-                        
 
-                            
+
+
                         <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-                       
-                        
-                        
+
+
+
                         <?php }else{ ?> 
                         <div class="form-control">
                             

@@ -8,8 +8,7 @@
                     <li><a href="index.php">Home</a></li>
                     <li><a href="features.php">Hosting</a></li>
                     <li><a href="aboutus.php">About us</a></li>
-                    <!--<li><a href="login.php" >Login</a></li>-->
-                    <?php if( isset($_SESSION['username']) && !empty($_SESSION['username']))
+                    <?php if( isset($_SESSION['user']) || isset($_SESSION['admin']))
                     {
                     ?>
                       <li><a href="index.php?logout='1'">Logout</a></li>
