@@ -108,9 +108,6 @@ if(isset($_POST['insert']))
 
 
 
-
-
-
   $query = "INSERT INTO jobappliaction (name, surename, email) VALUES ('$name' , '$surename', '$email')";
   $query_run = mysqli_query($db, $query);
 
