@@ -54,11 +54,15 @@ include('include/logout.php');
 
                     <form method="post" action="index.php">
                        
+                        <!-- User -->
                         <?php if($_SESSION['usertype'] == 'user')
                         {
                         ?>
+
                         <h2>User panel</h2>
 
+
+                        <!-- Admin -->
                         <?php }
                         else if($_SESSION['usertype'] == 'admin'){?>
                             <h2>Admin panel</h2>
