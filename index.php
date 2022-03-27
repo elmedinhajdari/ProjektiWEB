@@ -54,16 +54,19 @@ include('include/logout.php');
 
                     <form method="post" action="index.php">
                        
-                        <?php if( isset($_SESSION['user']))
+                        <?php if($_SESSION['usertype'] == 'user')
                         {
                         ?>
                         <h2>User panel</h2>
 
-
-            
+                        <?php }
+                        else if($_SESSION['usertype'] == 'admin'){?>
+                            <h2>Admin panel</h2>
+                            
 
                         <?php }
-                        
+                         
+                    
                         
                         else{ ?> 
                         <div class="form-control">
