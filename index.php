@@ -54,19 +54,13 @@ include('include/logout.php');
 
                     <form method="post" action="index.php">
                        
-<<<<<<< HEAD
-
-                        <?php if($_SESSION['usertype'] == 'user')
-=======
-                        <?php if( isset($_SESSION['user']))
->>>>>>> parent of bc9ef64 (User panel/Admin panel INDEX.PHP added)
+                        <?php if($_SESSION['usertype'] == 'admin')
                         {
                         ?>
 
                         <h2>User panel</h2>
 
 
-<<<<<<< HEAD
                         
                         <?php }
 
@@ -74,9 +68,6 @@ include('include/logout.php');
                         else if($_SESSION['usertype'] == 'admin'){?>
                             <h2>Admin panel</h2>
                             
-=======
-            
->>>>>>> parent of bc9ef64 (User panel/Admin panel INDEX.PHP added)
 
                         <?php }
                         
