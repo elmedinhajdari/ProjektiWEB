@@ -54,12 +54,7 @@ include('include/logout.php');
 
                     <form method="post" action="index.php">
                        
-<<<<<<< HEAD
                         <?php if($_SESSION['usertype'] == 'admin')
-=======
-                        <!-- User -->
-                        <?php if($_SESSION['usertype'] == 'user')
->>>>>>> parent of 5cd3aec (Update index.php)
                         {
                         ?>
 
@@ -69,7 +64,7 @@ include('include/logout.php');
                         
                         <?php }
 
-                        //Admin
+
                         else if($_SESSION['usertype'] == 'admin'){?>
                             <h2>Admin panel</h2>
                             
