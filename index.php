@@ -49,9 +49,12 @@ include('include/logout.php');
 
 
                 <div class="showcase-form card">
-                    <?php if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
+                    <?php if (isset($_SESSION['user'])) {
                     ?>
                         <h2>User panel</h2>
+
+
+                        
                     <?php } else { ?>
                         <h2>Register</h2>
                     <?php } ?>
