@@ -1,5 +1,6 @@
 <?php include('server.php');
 include('include/logout.php');
+ include('errors.php');
  ?>
 
 
@@ -49,31 +50,25 @@ include('include/logout.php');
 
 
                 <div class="showcase-form card">
-                    <?php if (isset($_SESSION['user'])) {
-                    ?>
+
+
+                    <form method="post" action="index.php">
+                       
+                        <?php if( isset($_SESSION['user']))
+                        {
+                        ?>
                         <h2>User panel</h2>
 
 
+            
+
+                        <?php }
                         
-                    <?php } else { ?>
-                        <h2>Register</h2>
-                    <?php } ?>
-
-                    <form method="post" action="index.php">
-                        <?php include('errors.php'); ?>
-                        <?php if( isset($_SESSION['username']))
-                        {
-                        ?>
-
-
-
-                        <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-
-
-
-                        <?php }else{ ?> 
+                        
+                        else{ ?> 
                         <div class="form-control">
-                            
+                        <h2>Register</h2><br>  
+
                         <input type="text" name="username" value="<?php echo $username; ?>" placeholder="Username">
                         </div>
                         <div class="form-control">
