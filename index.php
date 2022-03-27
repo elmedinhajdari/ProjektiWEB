@@ -62,8 +62,10 @@ include('include/logout.php');
                         <h2>User panel</h2>
 
 
-                        <!-- Admin -->
+                        
                         <?php }
+
+                        //Admin
                         else if($_SESSION['usertype'] == 'admin'){?>
                             <h2>Admin panel</h2>
                             
