@@ -68,9 +68,24 @@ if (isset($_POST['register'])) {
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";
   	header('location: index.php');
+
+    $logged_in_user_id = mysqli_insert_id($db);
+
+    $_SESSION['user'] = getUserById($logged_in_user_id); 
+    $_SESSION['success']  = "You are now logged in";
+    header('location: index.php');	
   }
 }
 
+
+function getUserById($id){
+	global $db;
+	$query = "SELECT * FROM users WHERE id=" . $id;
+	$result = mysqli_query($db, $query);
+
+	$user = mysqli_fetch_assoc($result);
+	return $user;
+}
 
 //-------------------------------------------------------------------------- Login ---------------------------------------------------------------------------------------
 
@@ -90,6 +105,8 @@ if (isset($_POST['login_user'])) {
         $password = md5($password);
         $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
         $results = mysqli_query($db, $query);
+
+        
         if (mysqli_num_rows($results) == 1) {
           $_SESSION['username'] = $username;
           $_SESSION['success'] = "You are now logged in";
