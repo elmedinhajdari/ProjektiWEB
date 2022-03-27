@@ -54,7 +54,7 @@ include('include/logout.php');
 
                     <form method="post" action="index.php">
                        
-                        <?php if($_SESSION['usertype'] == 'admin')
+                        <?php if($_SESSION['usertype'] == 'user')
                         {
                         ?>
 

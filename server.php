@@ -112,10 +112,12 @@ if (isset($_POST['login_user'])) {
           if ($logged_in_user['user_role'] == 'admin') {
     
             $_SESSION['user'] = $logged_in_user;
+            $_SESSION['usertype'] = $logged_in_user['user_role'];
             $_SESSION['success']  = "You are now logged in";
             header('location: index.php');		  
           }else{
             $_SESSION['user'] = $logged_in_user;
+            $_SESSION['usertype'] = $logged_in_user['user_role'];
             $_SESSION['success']  = "You are now logged in";
     
             header('location: index.php');
