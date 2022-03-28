@@ -16,7 +16,7 @@ include('./include/logout.php');
 </head>
 
 
-<body style="background-image: url('test.jpg');">
+<body style="background-image: url('./images/test.jpg');">
 
 
 <?php include('include/header.php')  ?>

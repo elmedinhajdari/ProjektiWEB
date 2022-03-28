@@ -11,6 +11,7 @@
                     <?php if( isset($_SESSION['user']) || isset($_SESSION['admin']))
                     {
                     ?>
+                    
                       <li><a href="index.php?logout='1'">Logout</a></li>
                     <?php }else{ ?>
                         <li><a href="login.php">Login</a></li>

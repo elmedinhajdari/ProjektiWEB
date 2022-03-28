@@ -14,7 +14,7 @@
     <title>BuzzHosting | Internet Hosting</title>
 </head>
 
-<body style="background-image: url('login.jpg')">
+<body style="background-image: url('./images/test5.jpg')">
 
 <?php include('include/header.php')  ?>
 

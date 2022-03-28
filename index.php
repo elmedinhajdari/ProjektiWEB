@@ -43,17 +43,36 @@ include('include/logout.php');
                 <form method="post" action="index.php">
 
 
-
+                
                     <?php if (isset($_SESSION['usertype']) && $_SESSION['usertype'] == 'user') {
+                        
                     ?>
+
+                    
                         <h2>User panel</h2>
+                        <?php  echo $_SESSION['usertype'] ?>
+                        <div class="form-controls">
+                            <a>We are currently looking for people to work with us!</a>
+                            </div>
+                        <a href="job.php" class="btn btn-primary">Apply for a job!</a>
 
 
 
-                    <?php } else if (isset($_SESSION['usertype']) && $_SESSION['usertype'] == 'admin') { ?>
+                    <?php  }
+                    
+                    else if (isset($_SESSION['usertype']) && $_SESSION['usertype'] == 'admin') { ?>
+                     
+
                         <h2>Admin panel</h2>
+                        <?php
 
+                          
 
+                            
+
+                        ?>
+
+                            
                     <?php } else if (!(isset($_SESSION['usertype']))) { ?>
                         <h2>Register</h2>
                         <div class="form-control">
@@ -80,9 +99,11 @@ include('include/logout.php');
         </div>
     </section>
 
+
+    <div style="background-image: url('./images/test6.jpg');" >
     <!-- Stats -->
     <div class="between">
-        <section class="stats">
+        <section  class="stats">
             <div class="container">
                 <h3 class="stats-heading text-center my-1">
                     This is our most recent work,<br>with modern architecture and
@@ -104,7 +125,7 @@ include('include/logout.php');
                     <div>
                         <i class="fas fa-project-diagram fa-3x"></i>
                         <h3>2,349,555</h3>
-                        <p class="text-secondary ">Projects</p>
+                        <p class="text-secondary">Projects</p>
                     </div>
 
                 </div>
@@ -112,7 +133,7 @@ include('include/logout.php');
         </section>
 
         <!--CLI-->
-        <section class="cli">
+        <section  class="cli">
             <div class="container grid text-center">
 
 
@@ -147,7 +168,7 @@ include('include/logout.php');
             </div>
     </div>
     </section>
-
+    </div>
 
     <!--Cloud-->
 
