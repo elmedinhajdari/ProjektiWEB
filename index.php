@@ -143,69 +143,7 @@ include('include/logout.php');
                         </div><?php }
                         } ?>
 
-                <?php if (mysqli_num_rows($select_product) > 1) {
-                    while ($fetch_product = mysqli_fetch_assoc($select_product)) {
 
-
-                ?>
-                        <div class="card hover1">
-                            <h3>TV+Internet Pack</h3>
-                            <h1 class="test1">14€/Month</h1>
-                            <ul>
-                                <li>300 TV Channels</li>
-                                <li class="underline"></li>
-                                <li>4K Resiver</li>
-                                <li class="underline"></li>
-                                <li>Best Channels</li>
-                                <li class="underline"></li>
-                                <li>Sportive Channels</li>
-                                <li class="underline"></li>
-                                <li>Professional Support</li>
-                            </ul>
-                            <a href="javascript:void(0);">
-                                <h1 class="order">Order now</h1>
-                            </a>
-                        </div><?php }
-                        } ?>
-
-                <div class="card hover1">
-                    <h3>Cyber Power Pack</h3>
-                    <h1 class="test1">22€/Month</h1>
-                    <ul>
-
-
-                        <li>300 TV Channels</li>
-                        <li class="underline"></li>
-                        <li>4K Resiver</li>
-                        <li class="underline"></li>
-                        <li>Best Channels</li>
-                        <li class="underline"></li>
-                        <li>Sportive Channels</li>
-                        <li class="underline"></li>
-                        <li>Professional Support</li>
-                    </ul>
-                    <a href="javascript:void(0);">
-                        <h1 class="order">Order now</h1>
-                    </a>
-                </div>
-                <div class="card hover1">
-                    <h3>Mega Power Pack</h3>
-                    <h1 class="test1">30€/Month</h1>
-                    <ul>
-                        <li>300 TV Channels</li>
-                        <li class="underline"></li>
-                        <li>4K Resiver</li>
-                        <li class="underline"></li>
-                        <li>Best Channels</li>
-                        <li class="underline"></li>
-                        <li>Sportive Channels</li>
-                        <li class="underline"></li>
-                        <li>Professional Support</li>
-                    </ul>
-                    <a href="javascript:void(0);">
-                        <h1 class="order">Order now</h1>
-                    </a>
-                </div>
             </div>
     </div>
     </section>
