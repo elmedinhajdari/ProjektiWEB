@@ -439,3 +439,17 @@ img{
 .login .card{
     height: 300px;
 }
+
+
+.jobap  {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+ 
+}
+
+
+ .form-controls{
+    margin: 20px 0;
+}

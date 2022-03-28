@@ -15,31 +15,50 @@ include('./include/logout.php');
   <title>Job Application</title>
 </head>
 
-<body>
+
+<body style="background-image: url('test.jpg');">
+
+
 <?php include('include/header.php')  ?>
  
 
 
 
-    <div class="py-5">
+<div class="jobap py-5">
+    <div class=" login showcase-form card ">
       <form action="" method="POST">
       <center>
     <h1>Job applcation</h1>
-  </center>
+   </center>
+
+   <div class="form-controls">
         <label> Name: </label>
         <input type="text" name="name" placeholder="Enter your name" />
-
+   </div>
+   <div class="form-controls">
         <label> Surename: </label>
         <input type="text" name="surename" placeholder="Enter your surename" />
-
+   </div>
+   <div class="form-controls">
         <label> Email: </label>
         <input type="email" name="email" placeholder="Enter your Email" />
+        </div>
+        <div class="form-controls">
+        <label> Phone: </label>
+        <input type="text" name="phone" placeholder="Enter your phone number" />
+        </div>
+        <div class="form-controls">
+        <label> City: </label>
+        <input type="text" name="city" placeholder="Enter your city" />
+        </div>
 
 
+        <input type="submit" name="insert" class="btn btn-primary" value="Apply!" />
 
-        <input type="submit" name="insert" value="Apply!" />
       </form>
+      </div>
     </div>
+
 
 
   <?php include('include/footer.php')  ?>

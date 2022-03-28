@@ -14,7 +14,7 @@
     <title>BuzzHosting | Internet Hosting</title>
 </head>
 
-<body>
+<body style="background-image: url('login.jpg')">
 
 <?php include('include/header.php')  ?>
 
@@ -29,7 +29,7 @@
     </section>
 
     
-<div class="login py-5">
+<div class="login py-5 m-5">
     <div class="showcase-form card">
         <h2>Login</h2>
         <form method="post" action="index.php">

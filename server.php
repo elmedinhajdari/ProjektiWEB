@@ -139,11 +139,10 @@ if(isset($_POST['insert']))
 {
   $name = $_POST['name'];
   $surename = $_POST['surename'];
-  $email = $_POST['email'];
+  $phone = $_POST['phone'];
+  $city = $_POST['city'];
 
-
-
-  $query = "INSERT INTO jobappliaction (name, surename, email) VALUES ('$name' , '$surename', '$email')";
+  $query = "INSERT INTO jobapplication (name, surename, email, phone, city) VALUES ('$name' , '$surename', '$email', '$phone', '$city')";
   $query_run = mysqli_query($db, $query);
 
   if($query_run){
