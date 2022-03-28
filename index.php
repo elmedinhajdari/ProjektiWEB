@@ -121,35 +121,39 @@ include('include/logout.php');
             <section class="cli">
                 <div class="container grid text-center">
 
+
+                <?php $select_product = mysqli_query($db, "SELECT * FROM produktet") or die('query failed');?>
+                    <?php if(mysqli_num_rows($select_product) > 0){
+                            while($fetch_product=mysqli_fetch_assoc($select_product)){
+
+                            
+                     ?>
                     <div class="card hover1">
-                        <h3>TV Pack</h3>
-                        <h1 class="test1">8€/Month</h1>
+
+                        <h3><?php echo $fetch_product['oferta']; ?></h3>
+                        <h1 class="test1"><?php echo $fetch_product['qmimi']; ?>$</h1>
                         <ul>
-                            <li>300 TV Channels</li>
+                            <li><?php echo $fetch_product['kanalet']; ?></li>
                             <li class="underline"></li>
-                            <li>4K Resiver</li>
+                            <li><?php echo $fetch_product['reseiver']; ?></li>
                             <li class="underline"></li>
-                            <li>Best Channels</li>
+                            <li><?php echo $fetch_product['download']; ?></li>
                             <li class="underline"></li>
-                            <li>Sportive Channels</li>
+                            <li><?php echo $fetch_product['upload']; ?></li>
                             <li class="underline"></li>
-                            <li>Professional Support</li>
+                            <li><?php echo $fetch_product['support']; ?></li>
                         </ul>
                         <a href="javascript:void(0);">
                             <h1 class="order">Order now</h1>
                         </a>
-                    </div>
+                    </div><?php }} ?>
                     <div class="card hover1">
                         <h3>TV+Internet Pack</h3>
                         <h1 class="test1">14€/Month</h1>
                         <ul>
-                            <li>300 TV Channels</li>
+                        <li>300 TV Channels</li>
                             <li class="underline"></li>
                             <li>4K Resiver</li>
-                            <li class="underline"></li>
-                            <li>100 Mbp/s DW</li>
-                            <li class="underline"></li>
-                            <li>40 Mbp/s DW</li>
                             <li class="underline"></li>
                             <li>Best Channels</li>
                             <li class="underline"></li>
@@ -168,17 +172,13 @@ include('include/logout.php');
                         <ul>
 
 
-                            <li>TV Pack</li>
+                        <li>300 TV Channels</li>
                             <li class="underline"></li>
                             <li>4K Resiver</li>
                             <li class="underline"></li>
-                            <li>500 Mbp/s DW</li>
+                            <li>Best Channels</li>
                             <li class="underline"></li>
-                            <li>100 Mbp/s UP</li>
-                            <li class="underline"></li>
-                            <li>Low Latency</li>
-                            <li class="underline"></li>
-                            <li>Netflix</li>
+                            <li>Sportive Channels</li>
                             <li class="underline"></li>
                             <li>Professional Support</li>
                         </ul>
@@ -190,15 +190,13 @@ include('include/logout.php');
                         <h3>Mega Power Pack</h3>
                         <h1 class="test1">30€/Month</h1>
                         <ul>
-                            <li>TV Pack</li>
+                        <li>300 TV Channels</li>
                             <li class="underline"></li>
-                            <li>1 Gbp/s DW</li>
+                            <li>4K Resiver</li>
                             <li class="underline"></li>
-                            <li>250 Mbp/s UP</li>
+                            <li>Best Channels</li>
                             <li class="underline"></li>
-                            <li>Low Latency</li>
-                            <li class="underline"></li>
-                            <li>Free Netflix+Hulu</li>
+                            <li>Sportive Channels</li>
                             <li class="underline"></li>
                             <li>Professional Support</li>
                         </ul>
