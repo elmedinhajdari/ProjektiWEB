@@ -67,6 +67,7 @@ if (isset($_POST['register'])) {
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";
+    $_SESSION['usertype'] = 'user';
   	header('location: index.php');
 
     $logged_in_user_id = mysqli_insert_id($db);

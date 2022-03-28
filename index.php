@@ -1,6 +1,5 @@
 <?php include('server.php');
 include('include/logout.php');
- include('errors.php');
  ?>
 
 
@@ -24,18 +23,7 @@ include('include/logout.php');
 
 
 
-    <div class="content">
-        <!-- notification message -->
-        <?php if (isset($_SESSION['success'])) : ?>
-            <div class="error success">
-                <h3>
-                    <?php
-                    echo $_SESSION['success'];
-                    unset($_SESSION['success']);
-                    ?>
-                </h3>
-            </div>
-        <?php endif ?>
+   
 
 
 
@@ -51,9 +39,12 @@ include('include/logout.php');
 
                 <div class="showcase-form card">
 
-
+            <?php  include('errors.php');?> 
                     <form method="post" action="index.php">
-                        <?php if($_SESSION['usertype'] == 'user')
+
+
+                    
+                        <?php if(isset($_SESSION['usertype']) && $_SESSION['usertype'] == 'user')
                         {
                         ?>
                         <h2>User panel</h2>
@@ -61,14 +52,14 @@ include('include/logout.php');
 
                         
                         <?php }
-                        else if($_SESSION['usertype'] == 'admin'){?>
+                        else if(isset($_SESSION['usertype']) && $_SESSION['usertype'] == 'admin'){?>
                             <h2>Admin panel</h2>
                             
 
                         <?php }
                         
                         
-                        else{ ?> 
+                        else if(!(isset($_SESSION['usertype']))){ ?> 
                         <div class="form-control">
                         <h2>Register</h2><br>  
 
