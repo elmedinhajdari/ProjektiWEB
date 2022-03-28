@@ -60,8 +60,9 @@ include('include/logout.php');
                         
                         
                         else if(!(isset($_SESSION['usertype']))){ ?> 
+                        <h2>Register</h2>  
                         <div class="form-control">
-                        <h2>Register</h2><br>  
+                        
 
                         <input type="text" name="username" value="<?php echo $username; ?>" placeholder="Username">
                         </div>
@@ -147,6 +148,12 @@ include('include/logout.php');
                             <h1 class="order">Order now</h1>
                         </a>
                     </div><?php }} ?>
+
+                    <?php if(mysqli_num_rows($select_product) > 1){
+                            while($fetch_product=mysqli_fetch_assoc($select_product)){
+
+                            
+                     ?>
                     <div class="card hover1">
                         <h3>TV+Internet Pack</h3>
                         <h1 class="test1">14€/Month</h1>
@@ -164,7 +171,7 @@ include('include/logout.php');
                         <a href="javascript:void(0);">
                             <h1 class="order">Order now</h1>
                         </a>
-                    </div>
+                        </div><?php }} ?>
                     
                     <div class="card hover1">
                         <h3>Cyber Power Pack</h3>
