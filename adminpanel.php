@@ -1,7 +1,7 @@
 <?php
 
 include('server.php');
-if (!isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'user') {
+if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] == 'user') {
     header('location: index.php');
 }
 
