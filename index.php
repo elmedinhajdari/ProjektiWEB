@@ -50,7 +50,7 @@ include('include/logout.php');
 
                     
                         <h2>User panel</h2>
-                        <?php  echo $_SESSION['usertype'] ?>
+
                         <div class="form-controls">
                             <a>We are currently looking for people to work with us!</a>
                             </div>
