@@ -20,17 +20,17 @@ if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] == 'user') {
     <title>Admin Panel</title>
 </head>
 
-<body>
+<body class="image" style="background-image: url('./images/adminpanel2.webp');">
     <?php include('include/header.php')  ?>
 
-    <div class="show-users">
+    <div class="jobap py-5 my-5">
 
-        <div class="adminpanel_header">
-            <h2>All Users</h2>
-        </div>
-        <div>
+
+        <div class="card panel">
+            <center class="my-2"> <h2>All users </h2> </center>
             <table>
                 <thead>
+
                     <th>id</th>
                     <th>username</th>
                     <th>email</th>

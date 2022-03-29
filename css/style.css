@@ -79,6 +79,18 @@ img{
     margin: 0 5px;
 }
 
+.panel th{
+    position: relative;
+    padding: 5px;
+
+
+}
+
+.image background-image{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
 .navbar a:hover{
     border-bottom: 2px #fff solid;
 }

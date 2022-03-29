@@ -52,9 +52,10 @@ include('include/logout.php');
                         <h2>User panel</h2>
 
                         <div class="form-controls">
-                            <a>We are currently looking for people to work with us!</a>
-                            <?php $username=$_SESSION['username'];
+                        <?php $username=$_SESSION['username'];
                             echo 'Mirsevjen '.$username ?>
+                            <a>We are currently looking for people to work with us!</a>
+                            
                             </div>
                         <a href="job.php" class="btn btn-primary">Apply for a job!</a>
 
