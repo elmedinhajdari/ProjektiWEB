@@ -177,7 +177,7 @@ if(isset($_POST['update_user'])){
   $sql="update `users` set username='$username',user_role='$userrole' where id='$user'";
   $result=mysqli_query($db,$sql);
   if($result){
-      echo 'updated sucesfully';
+      
   }else{
       die(mysqli_error($db));
   }

@@ -1,5 +1,5 @@
     <!-- Footer -->
-    <footer id="footer" class="bg-dark py-5">
+    <footer id="footer" class="bg-dark py-5 mx-5">
         <div class="container grid grid-3">
             <div>
                 <h1>Buzz Hosting</h1>

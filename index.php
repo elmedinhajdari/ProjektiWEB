@@ -52,8 +52,7 @@ include('include/logout.php');
                         <h2>User panel</h2>
 
                         <div class="form-controls">
-                        <?php $username=$_SESSION['username'];
-                            echo 'Mirsevjen '.$username ?>
+                        <p>Welcome, <strong><?php echo $username=$_SESSION['username'];?></strong></p>
                             <a>We are currently looking for people to work with us!</a>
                             
                             </div>
@@ -67,14 +66,10 @@ include('include/logout.php');
                      
 
                         <h2>Admin panel</h2>
-                        <?php
-
-                          
-
-                            
-
-                        ?>
-
+                        <p>Welcome, <strong><?php echo $username=$_SESSION['username'];?></strong></p>
+                        <a href="adminpanel.php" class="btn text-light">User list</a>
+                        <a href="adminpanel.php" class="btn text-light">CV list</a>
+                        <a href="adminpanel.php" class="btn text-light">Order list</a>
                             
                     <?php } else if (!(isset($_SESSION['usertype']))) { ?>
                         <h2>Register</h2>
