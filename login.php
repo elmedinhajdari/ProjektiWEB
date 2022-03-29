@@ -20,6 +20,7 @@
 
     <!-- Showcase -->
     <section class="showcase2">
+    
         <div class="container grid">
             <div class="showcase-text">
                 <h1>Login</h1>
@@ -29,10 +30,13 @@
     </section>
 
     <div class="py-4"></div>
+    
 <div class="login py-5 my-5">
+
     <div class="showcase-form card">
+
         <h2>Login</h2>
-        <form method="post" action="index.php">
+        <form method="post" action="login.php">
             <?php include('errors.php');?>
             <div class="form-control">
                 <input id="e" type="text" name="username" placeholder="Username" required>

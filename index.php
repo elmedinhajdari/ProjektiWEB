@@ -153,7 +153,7 @@ include('include/logout.php');
 
                 ?>        
                            
-                        <div class="card hover1 ">
+                        <div class="card hover1">
 
                             <h3><?php echo $fetch_product['oferta']; ?></h3>
                             <h1 class="test1"><?php echo $fetch_product['qmimi']; ?>€/Month</h1>

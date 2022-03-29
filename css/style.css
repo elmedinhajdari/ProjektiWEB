@@ -409,6 +409,7 @@ img{
     {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+        
     }
     .showcase{
         height: auto;
@@ -423,12 +424,15 @@ img{
         margin: auto;
     }
 
+    .cli .grid{
+        
+       
+        justify-items: center;
+       
 
-
-    .cli .card{
-        grid-template-columns: repeat(1, 1fr);
-        width: 60%;
     }
+
+    
     .features-head,
     .features-sub-head,
     .aboutus-head{
@@ -464,6 +468,9 @@ img{
     text-align: center;
 }
 
+.tt1{
+    margin-left: 100px;
+}
 
 
 .navbar ul{
@@ -475,7 +482,15 @@ img{
 
 .cli .card{
     grid-template-columns: repeat(1, 1fr);
-    width: 60%;
+        width: 50%;
+       
+
+}
+
+
+.cli .card ul{
+    align-content: center;
+       
 
 }
 
