@@ -115,7 +115,7 @@ if (isset($_POST['login_user'])) {
             $_SESSION['user'] = $logged_in_user;
             $_SESSION['usertype'] = $logged_in_user['user_role'];
             $_SESSION['success']  = "You are now logged in";
-            header('location: index.php');		  
+            header('location: adminpanel.php');		  
           }else{
             $_SESSION['user'] = $logged_in_user;
             $_SESSION['usertype'] = $logged_in_user['user_role'];
@@ -156,8 +156,17 @@ if(isset($_POST['insert']))
 }
 
 
+if(isset($_GET['removeuser'])){
+  $id=$_GET['removeuser'];
 
-
+  $sql="delete from `users` where id='$id'";
+  $result=mysqli_query($db,$sql);
+  if($result){
+      echo 'deleted sucesfully';
+  }else{
+      die(mysqli_error($db));
+  }
+}
 
 
 
