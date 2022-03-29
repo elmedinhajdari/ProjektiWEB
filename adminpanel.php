@@ -47,7 +47,14 @@ if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] == 'user') {
                                 <td><?php echo $fetch_users['id']; ?></td>
                                 <td><?php echo $fetch_users['username']; ?></td>
                                 <td><?php echo $fetch_users['email']; ?></td>
-                                <td><?php echo $fetch_users['user_role']; ?></td>
+                                <td><?php
+                                if($fetch_users['user_role'] == 'admin'){
+                                   ?> <p class="colorred"><strong>Admin</strong></p> <?php
+                                } else{
+                                    ?> <p><strong>User</strong></p> <?php
+                                }?>
+                                
+
                                 <td>
                                     <form method="post" action="adminpanel.php">
                                         <input type="hidden" name="user_id" value="<?php echo $fetch_users['id']; ?>">
@@ -84,7 +91,7 @@ if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] == 'user') {
                                  <td><input type="hidden" name="user_id" value="<?php echo $_POST['user_id']; ?>"><?php echo $_POST['user_id']; ?></td>
                                 <td><input type="text" name="user_name" value="<?php echo $_POST['user_name']; ?>"></td>
                                 <td><select  name="user_role" value="<?php echo $_POST['user_role']; ?>"><option value="user">User</option>
-                                                                                                         <option value="admin">Admin</option></td>
+                                                                                                         <option class="colorred" value="admin">Admin</option></td>
                                 <td><input type="submit" class="btn-save" name="update_user" value="Save "></td>
                             </form>
                         </tr>
@@ -96,7 +103,7 @@ if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] == 'user') {
     <?php } ?>
 
 
-
+<div class="py-5"></div>
 
     <?php include('include/footer.php')  ?>
 

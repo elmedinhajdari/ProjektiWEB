@@ -89,41 +89,47 @@ include('include/logout.php');
 
     <!--Languages-->
     <section class="languages">
+        
         <h2 class="md text-center my-2">
             Supported languages
         </h2>
-        <div class="container flex">
-            <div class="card hover2">
+        
+        <div onclick="plusSlides(1)" class="container flex">
+            
+            <div class="card hover2 mySlides">
                 <h4>Node.js</h4>
                 <img src="images/logos/node.png" alt="">
             </div>
-            <div class="card hover2">
+            <div class="card hover2 mySlides">
                 <h4>Python</h4>
                 <img src="images/logos/python.png" alt="">
             </div>
-            <div class="card hover2">
+            <div class="card hover2 mySlides">
                 <h4>C#</h4>
                 <img src="images/logos/csharp.png" alt="">
             </div>
-            <div class="card hover2">
+            <div class="card hover2 mySlides">
                 <h4>Ruby</h4>
                 <img src="images/logos/ruby.png" alt="">
             </div>
-            <div class="card hover2">
+            <div class="card hover2 mySlides demo">
                 <h4>PHP</h4>
                 <img src="images/logos/php.png" alt="">
             </div>
-            <div class="card hover2">
+            <div class="card hover2 mySlides demo">
                 <h4>Scala</h4>
-                <img src="images/logos/scala.png" alt="">
+                <img src="images/logos/scala.png " alt="">
             </div>
-            <div class="card hover2">
+            <div class="card hover2 demo mySlides ">
                 <h4>Clojure</h4>
                 <img src="images/logos/clojure.png" alt="">
+                
             </div>
+            
         </div>
+   
+
     </section>
-    
     <?php include('include/footer.php')  ?>
     <script src="js/script.js"></script>
 

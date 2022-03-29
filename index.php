@@ -47,7 +47,6 @@ include('include/logout.php');
                     <?php if (isset($_SESSION['usertype']) && $_SESSION['usertype'] == 'user') {
                         
                     ?>
-
                     
                         <h2>User panel</h2>
 
@@ -65,12 +64,21 @@ include('include/logout.php');
                     else if (isset($_SESSION['usertype']) && $_SESSION['usertype'] == 'admin') { ?>
                      
 
+
+
+
                         <h2>Admin panel</h2>
                         <p>Welcome, <strong><?php echo $username=$_SESSION['username'];?></strong></p>
-                        <a href="adminpanel.php" class="btn text-light">User list</a>
-                        <a href="adminpanel.php" class="btn text-light">CV list</a>
-                        <a href="adminpanel.php" class="btn text-light">Order list</a>
-                            
+
+
+                        
+                        <a href="adminpanel.php" class="btn text-light ">User list</a>
+                        <a href="adminpanel.php" class="btn text-light ">CV list</a>
+                        <a href="adminpanel.php" class="btn text-light ">Order list</a>
+
+                       
+                        
+                        
                     <?php } else if (!(isset($_SESSION['usertype']))) { ?>
                         <h2>Register</h2>
                         <div class="form-control">
@@ -132,7 +140,7 @@ include('include/logout.php');
 
         <!--CLI-->
         <section  class="cli">
-            <div class="container grid text-center">
+            <div class="container grid text-center ">
 
 
                 <?php $select_product = mysqli_query($db, "SELECT * FROM produktet") or die('query failed'); ?>
@@ -140,8 +148,9 @@ include('include/logout.php');
                     while ($fetch_product = mysqli_fetch_assoc($select_product)) {
 
 
-                ?>
-                        <div class="card hover1">
+                ?>        
+                           
+                        <div class="card hover1 ">
 
                             <h3><?php echo $fetch_product['oferta']; ?></h3>
                             <h1 class="test1"><?php echo $fetch_product['qmimi']; ?>$</h1>
@@ -155,11 +164,15 @@ include('include/logout.php');
                                 <li><?php echo $fetch_product['upload']; ?></li>
                                 <li class="underline"></li>
                                 <li><?php echo $fetch_product['support']; ?></li>
+                              
                             </ul>
                             <a href="javascript:void(0);">
                                 <h1 class="order">Order now</h1>
                             </a>
-                        </div><?php }
+                            
+                        </div>
+                    
+                        <?php }
                         } ?>
 
 

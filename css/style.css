@@ -65,6 +65,10 @@ img{
     
 }
 
+.colorred{
+    color: red;
+}
+
 .navbar .flex{
     justify-content: space-between;
 }
@@ -492,4 +496,13 @@ img{
   .customers th{
     
     text-align: center;
+    
   }
+
+
+
+
+
+
+
+  
