@@ -164,7 +164,7 @@ if(isset($_GET['removeuser'])){
   $sql="delete from `users` where id='$id'";
   $result=mysqli_query($db,$sql);
   if($result){
-      echo 'deleted sucesfully';
+      
   }else{
       die(mysqli_error($db));
   }

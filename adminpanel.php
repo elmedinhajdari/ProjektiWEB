@@ -20,8 +20,10 @@ if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] == 'user') {
     <title>Admin Panel</title>
 </head>
 
-<body class="image" style="background-image: url('./images/adminpanel2.webp');">
+<body style="background-image: url('./images/apanel.png');">
     <?php include('include/header.php')  ?>
+
+   
 
     <div class="jobap py-5 my-5">
 
@@ -31,7 +33,7 @@ if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] == 'user') {
             <table>
                 <thead>
 
-                    <th>id</th>
+
                     <th>username</th>
                     <th>email</th>
                     <th>user type</th>
@@ -42,13 +44,13 @@ if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] == 'user') {
                     if (mysqli_num_rows($reg_users) > 0) {
                         while ($fetch_users = mysqli_fetch_assoc($reg_users)) { ?>
                             <tr>
-                                <td><?php echo $fetch_users['id']; ?></td>
+                                
                                 <td><?php echo $fetch_users['username']; ?></td>
                                 <td><?php echo $fetch_users['email']; ?></td>
                                 <td><?php echo $fetch_users['user_role']; ?></td>
                                 <td>
                                     <form method="post" action="adminpanel.php">
-                                        <input type="hidden" name="user_id" value="<?php echo $fetch_users['id']; ?>">
+                                      
                                         <input type="hidden" name="user_name" value="<?php echo $fetch_users['username']; ?>">
                                         <input type="hidden" name="user_role" value="<?php echo $fetch_users['user_role']; ?>">
                                         <input type="submit" class="btn btn-danger" value="Edit" name="edit_user" class="text-light">
@@ -70,7 +72,7 @@ if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] == 'user') {
             <div>
                 <table>
                     <thead>
-                        <th>id</th>
+                        
                         <th>username</th>
                         <th>user type</th>
                         <th>action</th>
@@ -78,7 +80,7 @@ if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] == 'user') {
                     <tbody>
                         <tr>
                             <form action="" method="post">
-                                <td><input type="hidden" name="user_id" value="<?php echo $_POST['user_id']; ?>"><?php echo $_POST['user_id']; ?></td>
+                                
                                 <td><input type="text" name="user_name" value="<?php echo $_POST['user_name']; ?>"></td>
                                 <td><input type="text" name="user_role" value="<?php echo $_POST['user_role']; ?>"></td>
                                 <td><input type="submit" class="updateuser" name="update_user" value="save "></td>
@@ -89,6 +91,9 @@ if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] == 'user') {
             </div>
         </div>
     <?php } ?>
+
+
+
 
     <?php include('include/footer.php')  ?>
 

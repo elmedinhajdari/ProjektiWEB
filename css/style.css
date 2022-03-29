@@ -86,10 +86,13 @@ img{
 
 }
 
-.image background-image{
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
+.bg-image{
+    background-image: url('./images/test.jpg');
+    background-repeat:no-repeat;
+    background-size:contain;
+    height:200px;width:1200px;
 }
+
 
 .navbar a:hover{
     border-bottom: 2px #fff solid;
