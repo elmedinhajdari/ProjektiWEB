@@ -55,9 +55,10 @@ include('include/logout.php');
                             <a>We are currently looking for people to work with us!</a>
                             
                             </div>
+                            <div  class="blockers2">
                         <a href="job.php" class="btn btn-primary">Apply for a job!</a>
-
-
+                        <a href="job.php" class="btn btn-primary">Order list!</a>
+                            </div>
 
                     <?php  }
                     

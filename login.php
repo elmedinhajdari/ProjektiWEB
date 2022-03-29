@@ -19,7 +19,7 @@
 <?php include('include/header.php')  ?>
 
     <!-- Showcase -->
-    <section class="showcase">
+    <section class="showcase2">
         <div class="container grid">
             <div class="showcase-text">
                 <h1>Login</h1>
@@ -28,8 +28,8 @@
         </div>
     </section>
 
-    
-<div class="login py-5 m-5">
+    <div class="py-4"></div>
+<div class="login py-5 my-5">
     <div class="showcase-form card">
         <h2>Login</h2>
         <form method="post" action="index.php">
@@ -43,8 +43,9 @@
             <input name="login_user" type="submit" value="Login" class="btn btn-primary">
         </form>
     </div>
+   
 </div>
-
+<div class="py-4"></div>
 
 <?php include('include/footer.php')  ?>
 

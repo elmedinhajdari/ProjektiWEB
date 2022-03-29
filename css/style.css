@@ -103,6 +103,34 @@ img{
 }
 
 /* Showcase */
+
+
+.showcase2{
+    height: 300px;
+    /*background-color:rgb(12, 87, 148);*/
+    background-color: var(--othercolor);
+    color: #fff;
+    position: relative;
+}
+
+
+.showcase2 h1{
+    font-size: 40px;
+}
+
+.showcase2 p{
+    margin: 20p 0;
+}
+
+
+
+.showcase2 .grid{
+    overflow: visible;
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+
+
 .showcase{
     height: 400px;
     /*background-color:rgb(12, 87, 148);*/
@@ -206,7 +234,15 @@ img{
     gap: 10px;
 }
 
+.blockers2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
 
+.blockers2 a{
+    text-align: center;
+}
 
 .blockers a{
     text-align: center;

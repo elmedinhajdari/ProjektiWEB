@@ -48,7 +48,8 @@ include('include/logout.php');
         </section>
 
     <!--Bottom-->
-    <section class="features-main my-2">
+
+    <section  class="features-main my-2">
         <div class="container grid grid-3">
             <div class="card flex">
                 <i class="fas fa-server fa-3x"></i>
@@ -127,7 +128,7 @@ include('include/logout.php');
             </div>
             
         </div>
-   
+
 
     </section>
     <?php include('include/footer.php')  ?>
