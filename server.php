@@ -112,11 +112,13 @@ if (isset($_POST['login_user'])) {
           $logged_in_user = mysqli_fetch_assoc($results);
           if ($logged_in_user['user_role'] == 'admin') {
     
+            $_SESSION['username'] = $logged_in_user['username'];
             $_SESSION['user'] = $logged_in_user;
             $_SESSION['usertype'] = $logged_in_user['user_role'];
             $_SESSION['success']  = "You are now logged in";
             header('location: index.php');		  
           }else{
+            $_SESSION['username'] = $logged_in_user['username'];
             $_SESSION['user'] = $logged_in_user;
             $_SESSION['usertype'] = $logged_in_user['user_role'];
             $_SESSION['success']  = "You are now logged in";
