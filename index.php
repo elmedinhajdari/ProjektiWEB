@@ -53,6 +53,8 @@ include('include/logout.php');
 
                         <div class="form-controls">
                             <a>We are currently looking for people to work with us!</a>
+                            <?php $username=$_SESSION['username'];
+                            echo 'Mirsevjen '.$username ?>
                             </div>
                         <a href="job.php" class="btn btn-primary">Apply for a job!</a>
 

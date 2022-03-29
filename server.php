@@ -115,7 +115,7 @@ if (isset($_POST['login_user'])) {
             $_SESSION['user'] = $logged_in_user;
             $_SESSION['usertype'] = $logged_in_user['user_role'];
             $_SESSION['success']  = "You are now logged in";
-            header('location: adminpanel.php');		  
+            header('location: index.php');		  
           }else{
             $_SESSION['user'] = $logged_in_user;
             $_SESSION['usertype'] = $logged_in_user['user_role'];
@@ -168,7 +168,18 @@ if(isset($_GET['removeuser'])){
   }
 }
 
-
+if(isset($_POST['update_user'])){
+  $user=$_POST['user_id'];
+  $username=$_POST['user_name'];
+  $userrole=$_POST['user_role'];
+  $sql="update `users` set username='$username',user_role='$userrole' where id='$user'";
+  $result=mysqli_query($db,$sql);
+  if($result){
+      echo 'updated sucesfully';
+  }else{
+      die(mysqli_error($db));
+  }
+}
 
 
 
