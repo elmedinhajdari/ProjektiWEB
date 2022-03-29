@@ -158,6 +158,10 @@ if(isset($_POST['insert']))
 }
 
 
+
+
+
+//--------------------------------------------------- EDIT USERS ------------------------------------------------------------------------------------
 if(isset($_GET['removeuser'])){
   $id=$_GET['removeuser'];
 
@@ -175,6 +179,32 @@ if(isset($_POST['update_user'])){
   $username=$_POST['user_name'];
   $userrole=$_POST['user_role'];
   $sql="update `users` set username='$username',user_role='$userrole' where id='$user'";
+  $result=mysqli_query($db,$sql);
+  if($result){
+      
+  }else{
+      die(mysqli_error($db));
+  }
+}
+
+
+
+
+
+
+//--------------------------------------------------- EDIT PRODUCTS ------------------------------------------------------------------------------------
+
+if(isset($_POST['update_product'])){
+  $productid=$_POST['productid'];
+  $oferta=$_POST['oferta'];
+  $qmimi=$_POST['qmimi'];
+  $kanalet=$_POST['kanalet'];
+  $reseiver=$_POST['reseiver'];
+  $download=$_POST['download'];
+  $upload=$_POST['upload'];
+  $support=$_POST['support'];
+    $sql="update `produktet` set oferta='$oferta', qmimi='$qmimi', kanalet='$kanalet', reseiver='$reseiver',
+     download='$download', upload='$upload', support='$support' where id='$productid'";
   $result=mysqli_query($db,$sql);
   if($result){
       

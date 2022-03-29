@@ -1,4 +1,5 @@
-window.onscroll = function() {fixedNavbar()};
+window.onscroll = function() {
+  fixedNavbar()};
 
 var navbar = document.getElementById("nav1");
 var sticky = navbar.offsetTop;

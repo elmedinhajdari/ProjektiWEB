@@ -70,11 +70,12 @@ include('include/logout.php');
                         <h2>Admin panel</h2>
                         <p>Welcome, <strong><?php echo $username=$_SESSION['username'];?></strong></p>
 
-
-                        
+                        <div class="blockers">
                         <a href="adminpanel.php" class="btn text-light ">User list</a>
+                        <a href="adminpanelproducts.php" class="btn text-light ">Product List</a>
                         <a href="adminpanel.php" class="btn text-light ">CV list</a>
                         <a href="adminpanel.php" class="btn text-light ">Order list</a>
+                        </div>
 
                        
                         
@@ -103,6 +104,7 @@ include('include/logout.php');
 
             </div>
         </div>
+        
     </section>
 
 
@@ -153,7 +155,7 @@ include('include/logout.php');
                         <div class="card hover1 ">
 
                             <h3><?php echo $fetch_product['oferta']; ?></h3>
-                            <h1 class="test1"><?php echo $fetch_product['qmimi']; ?>$</h1>
+                            <h1 class="test1"><?php echo $fetch_product['qmimi']; ?>€/Month</h1>
                             <ul>
                                 <li><?php echo $fetch_product['kanalet']; ?></li>
                                 <li class="underline"></li>
@@ -174,7 +176,7 @@ include('include/logout.php');
                     
                         <?php }
                         } ?>
-
+                <div class="py-3"></div>
 
             </div>
     </div>
@@ -182,8 +184,8 @@ include('include/logout.php');
     </div>
 
     <!--Cloud-->
-
-    <section class="cloud bg-primary mx-5">
+                
+    <section class="cloud bg-primary ">
         <div class="container grid">
             <div class="text-center">
                 <h2 class="lg">Extreme Hosting Servers</h2>

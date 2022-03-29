@@ -72,7 +72,7 @@ if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] == 'user') {
         </div>
     </div>
     <?php if (isset($_POST['edit_user'])) { ?>
-        <div class="jobap py-5 my-5">
+        <div class="jobap  ">
             <div class="card panel m-1 text-center"> 
             <center class="my-1"> <h2>All users </h2> </center>
             

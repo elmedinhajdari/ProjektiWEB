@@ -194,16 +194,25 @@ img{
 
 
 .cli .grid{
-    /*grid-template-columns: repeat(4, 1fr);*/
-    display: flex;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(4, 1fr);
     padding-top:  18px;
 
     
 }
 
+.blockers {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 10px;
+}
 
 
+
+.blockers a{
+    text-align: center;
+   
+
+}
 
 .test1{
     color: #A36A00;
