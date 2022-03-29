@@ -112,15 +112,15 @@ include('include/logout.php');
                 <h4>Ruby</h4>
                 <img src="images/logos/ruby.png" alt="">
             </div>
-            <div class="card hover2 mySlides demo">
+            <div class="card hover2 mySlides">
                 <h4>PHP</h4>
                 <img src="images/logos/php.png" alt="">
             </div>
-            <div class="card hover2 mySlides demo">
+            <div class="card hover2 mySlides ">
                 <h4>Scala</h4>
                 <img src="images/logos/scala.png " alt="">
             </div>
-            <div class="card hover2 demo mySlides ">
+            <div class="card hover2  mySlides ">
                 <h4>Clojure</h4>
                 <img src="images/logos/clojure.png" alt="">
                 
