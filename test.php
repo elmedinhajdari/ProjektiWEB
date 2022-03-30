@@ -1,19 +1,34 @@
-<?php include './include/server.php';?>
+<?php include 'server.php';?>
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="stylesheet" href="./css/style1.css">
-    <title>Files Upload and Download</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <form action="test.php" method="post" enctype="multipart/form-data" >
-          <h3>Upload File</h3>
-          <input type="file" name="myfile"> <br>
-          <button type="submit" name="save">upload</button>
-        </form>
-      </div>
-    </div>
-  </body>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css">
+  <title>Download files</title>
+</head>
+<body>
+
+<table>
+<thead>
+    <th>ID</th>
+    <th>Filename</th>
+    <th>size (in mb)</th>
+    <th>Downloads</th>
+    <th>Action</th>
+</thead>
+<tbody>
+
+    <tr>
+      <td><?php echo $fetch_cv['id']; ?></td>
+      <td><?php echo $fetch_cv['name']; ?></td>
+      <td><?php echo floor($file['size'] / 1000) . ' KB'; ?></td>
+      <td><?php echo $fetch_cv['downloads']; ?></td>
+      <td><a href="downloads.php?file_id=<?php echo $file['id'] ?>">Download</a></td>
+    </tr>
+
+
+</tbody>
+</table>
+
+</body>
 </html>

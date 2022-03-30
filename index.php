@@ -72,7 +72,7 @@ include('./include/logout.php');
                         <div class="blockers">
                             <a href="adminpanel.php" class="btn text-light ">User list</a>
                             <a href="adminpanelproducts.php" class="btn text-light ">Product List</a>
-                            <a href="adminpanel.php" class="btn text-light ">CV list</a>
+                            <a href="apcvlist.php" class="btn text-light ">CV list</a>
                             <a href="adminpanel.php" class="btn text-light ">Order list</a>
                         </div>
 

@@ -30,7 +30,7 @@ include('./include/logout.php');
         <center>
           <h1>Job applcation</h1>
         </center>
-
+        <?php include('./include/errors.php'); ?>
         <div class="form-controls">
           <label> Name: </label>
           <input type="text" name="name1" placeholder="Enter your name"/>
@@ -51,7 +51,7 @@ include('./include/logout.php');
           <label> City: </label>
           <input type="text" name="city" placeholder="Enter your city" />
         </div>
-        <input type="file" name="myfile"> <br><br>
+        <input type="file" name="myfile" value="Upload CV!"> <br><br>
         <input type="submit" name="save" class="btn btn-primary" value="Apply!" />
 
       </form>

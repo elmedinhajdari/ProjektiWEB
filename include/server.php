@@ -196,38 +196,80 @@ if(isset($_POST['update_product'])){
 
 
 
-// Uploads files
-if (isset($_POST['save'])) {  
 
+
+// Uploads files
+if (isset($_POST['save'])) { // if save button on the form is clicked
+  // name of the uploaded file
   $filename = $_FILES['myfile']['name'];
 
-    // destination of the file on the server
-    $destination = 'uploads/' . $filename;
+  // destination of the file on the server
+  $destination = 'uploads/' . $filename;
 
-    // get the file extension
-    $extension = pathinfo($filename, PATHINFO_EXTENSION);
+  // get the file extension
+  $extension = pathinfo($filename, PATHINFO_EXTENSION);
 
-    // the physical file on a temporary uploads directory on the server
+  // the physical file on a temporary uploads directory on the server
+  $name1=$_POST['name1'];
+  $surename=$_POST['surename'];
+  $email=$_POST['email'];
+  $phone=$_POST['phone'];
+  $city=$_POST['city'];
+  $file = $_FILES['myfile']['tmp_name'];
+  $size = $_FILES['myfile']['size'];
 
-    $surename = $_POST['surename'];
-    $phone = $_POST['phone'];
-    $city = $_POST['city'];
-    $file = $_FILES['myfile']['tmp_name'];
-    $size = $_FILES['myfile']['size'];
-
-    if (!in_array($extension, ['pdf', 'docx'])) {
-        echo "You file extension must be .zip, .pdf or .docx";
-    } elseif ($_FILES['myfile']['size'] > 1000000) { // file shouldn't be larger than 1Megabyte
-        echo "File too large!";
-    } else {
-        // move the uploaded (temporary) file to the specified destination
-        if (move_uploaded_file($file, $destination)) {
-            $sql = "INSERT INTO jobapplication (name, surename, email, phone, city, name, size) VALUES ('$username' , '$surename', '$email', '$phone', '$city', '$filename', $size)";
-            if (mysqli_query($db, $sql)) {
-                echo "File uploaded successfully";
-            }
-        } else {
-            echo "Failed to upload file.";
-        }
-    }
+  if (!in_array($extension, ['pdf', 'docx'])) {
+    array_push($errors,"You file extension must be .pdf or .docx");
+  } elseif ($_FILES['myfile']['size'] > 9000000) { // file shouldn't be larger than 1Megabyte
+    array_push($errors,  "File too large, it must be under 10MB");
+  } else {
+      
+      if (move_uploaded_file($file, $destination)) {
+        $sql = "INSERT INTO files (name1, surename, email, phone, city, name, size) VALUES
+        ('$name1', '$surename', '$email', '$phone', '$city', '$filename', '$size')";
+          if (mysqli_query($db, $sql)) {
+            array_push($errors, "File uploaded successfully");
+          }
+      } else {
+        array_push($errors,"Failed to upload file.");
+      }
+  }
 }
+
+// Downloads files
+if (isset($_GET['file_id'])) {
+  $id = $_GET['file_id'];
+
+  // fetch file to download from database
+  $sql = "SELECT * FROM files WHERE id=$id";
+  $result = mysqli_query($db, $sql);
+
+  $file = mysqli_fetch_assoc($result);
+  $filepath = 'uploads/' . $file['name'];
+
+  if (file_exists($filepath)) {
+      header('Content-Description: File Transfer');
+      header('Content-Type: application/octet-stream');
+      header('Content-Disposition: attachment; filename=' . basename($filepath));
+      header('Expires: 0');
+      header('Cache-Control: must-revalidate');
+      header('Pragma: public');
+      header('Content-Length: ' . filesize('uploads/' . $file['name']));
+      readfile('uploads/' . $file['name']);
+
+
+  }
+
+}
+
+
+
+if(isset($_GET['removecv'])){
+  $id=$_GET['removecv'];
+
+  $sql="delete from `files` where id='$id'";
+  $result=mysqli_query($db,$sql);
+
+}
+
+

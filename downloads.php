@@ -17,17 +17,14 @@
     <th>Action</th>
 </thead>
 <tbody>
-<?php $reg_files = mysqli_query($db, "SELECT * FROM `files`") or die('query failed');
-                    if (mysqli_num_rows($reg_files) > 0) {
-                        while ($fetch_files = mysqli_fetch_assoc($reg_files)) { ?>
+
     <tr>
       <td><?php echo $fetch_files['id']; ?></td>
       <td><?php echo $fetch_files['name']; ?></td>
-      <td><?php echo floor($fetch_files['size'] / 1000) . ' KB'; ?></td>
       <td><?php echo $fetch_files['downloads']; ?></td>
-      <td><a href="downloads.php?file_id=<?php echo $fetch_files['id'] ?>">Download</a></td>
+      <td><a href="apcvlist.php?file_id=<?php echo $fetch_files['id'] ?>">Download</a></td>
     </tr>
-  <?php }}?>
+
 
 </tbody>
 </table>

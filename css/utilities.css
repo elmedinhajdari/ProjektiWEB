@@ -28,8 +28,9 @@
 }
 
 
+
 .btn-delete{
-    display: inline-block;
+
     padding: 5px 21px;
     cursor: pointer;
     background-color: rgb(182, 13, 13);
@@ -39,6 +40,18 @@
     font-size: 16px;
 }
 
+
+
+.btn-savee{
+    display: inline-block;
+    padding: 5px 21px;
+    cursor: pointer;
+    background-color: rgb(14, 45, 219);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
 
 .btn-save{
     display: inline-block;
