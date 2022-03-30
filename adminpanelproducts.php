@@ -1,6 +1,6 @@
 <?php
 
-include('server.php');
+include('./include/server.php');
 if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] == 'user') {
     header('location: index.php');
 }
@@ -21,16 +21,18 @@ if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] == 'user') {
 </head>
 
 <body style="background-image: url('./images/apanel.png');">
-    <?php include('include/header.php')  ?>
+    <?php include('./include/header.php')  ?>
 
-   
+
 
     <div class="jobap py-5 my-5">
 
 
         <div class="card panel m-1 text-center ">
-            <center class="my-1"> <h2>Produktet </h2> </center>
-            <table  class="m-2 customers">
+            <center class="my-1">
+                <h2>Produktet </h2>
+            </center>
+            <table class="m-2 customers">
                 <thead>
                     <th>Product ID</th>
                     <th>Paketa</th>
@@ -56,7 +58,7 @@ if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] == 'user') {
                                 <td><?php echo $fetch_products['download']; ?></td>
                                 <td><?php echo $fetch_products['upload']; ?></td>
                                 <td><?php echo $fetch_products['support']; ?></td>
-                                <td>  
+                                <td>
                                     <form method="post" action="adminpanelproducts.php">
                                         <input type="hidden" name="productid" value="<?php echo $fetch_products['id']; ?>">
                                         <input type="hidden" name="oferta" value="<?php echo $fetch_products['oferta']; ?>">
@@ -69,7 +71,7 @@ if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] == 'user') {
                                         <input type="submit" class="btn btn-danger" value="Edit" name="edit_product" class="text-light">
                                     </form>
                                 </td>
-                                
+
                             </tr>
                     <?php }
                     } ?>
@@ -79,47 +81,50 @@ if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] == 'user') {
     </div>
     <?php if (isset($_POST['edit_product'])) { ?>
         <div class="jobap">
-            <div class="card panel m-1 text-center"> 
-            <center class="my-1"> <h2>All users </h2> </center>
-            
-            <div>
-                <table class="m-2 customers">
-                    <thead>
-                    <th>Product ID</th>
-                    <th>Paketa</th>
-                    <th>Qmimi</th>
-                    <th>Oferta 1</th>
-                    <th>Oferta 2</th>
-                    <th>Oferta 3</th>
-                    <th>Oferta 4</th>
-                    <th>Oferta 5</th>
-                    <th>action</th>   
+            <div class="card panel m-1 text-center">
+                <center class="my-1">
+                    <h2>Edit Product </h2>
+                </center>
 
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <form action="" method="post">
-                                 <td><input type="hidden" name="productid" value="<?php echo $_POST['productid']; ?>"><?php echo $_POST['productid']; ?></td>
-                                <td><input type="text" name="oferta" value="<?php echo $_POST['oferta']; ?>"></td>
-                                <td><input type="text" name="qmimi" value="<?php echo $_POST['qmimi']; ?>"></td>
-                                
-                                <td><input type="text" name="kanalet" value="<?php echo $_POST['kanalet']; ?>"></td>                                                                                                    </td>
-                                <td><input type="text" name="reseiver" value="<?php echo $_POST['reseiver']; ?>"></td>
-                                <td><input type="text" name="download" value="<?php echo $_POST['download']; ?>"></td>
-                                <td><input type="text" name="upload" value="<?php echo $_POST['upload']; ?>"></td>
-                                <td><input type="text" name="support" value="<?php echo $_POST['support']; ?>"></td>
-                                <td><input type="submit" class="btn-save" name="update_product" value="Save "></td>
-                            </form>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                <div>
+                    <table class="m-2 customers">
+                        <thead>
+                            <th>Product ID</th>
+                            <th>Paketa</th>
+                            <th>Qmimi</th>
+                            <th>Oferta 1</th>
+                            <th>Oferta 2</th>
+                            <th>Oferta 3</th>
+                            <th>Oferta 4</th>
+                            <th>Oferta 5</th>
+                            <th>action</th>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <form action="" method="post">
+                                    <td><input type="hidden" name="productid" value="<?php echo $_POST['productid']; ?>"><?php echo $_POST['productid']; ?></td>
+                                    <td><input type="text" name="oferta" value="<?php echo $_POST['oferta']; ?>"></td>
+                                    <td><input type="text" name="qmimi" value="<?php echo $_POST['qmimi']; ?>"></td>
+
+                                    <td><input type="text" name="kanalet" value="<?php echo $_POST['kanalet']; ?>"></td>
+                                    </td>
+                                    <td><input type="text" name="reseiver" value="<?php echo $_POST['reseiver']; ?>"></td>
+                                    <td><input type="text" name="download" value="<?php echo $_POST['download']; ?>"></td>
+                                    <td><input type="text" name="upload" value="<?php echo $_POST['upload']; ?>"></td>
+                                    <td><input type="text" name="support" value="<?php echo $_POST['support']; ?>"></td>
+                                    <td><input type="submit" class="btn-save" name="update_product" value="Save "></td>
+                                </form>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     <?php } ?>
 
 
-<div class="py-5"></div>
+    <div class="py-5"></div>
 
     <?php include('include/footer.php')  ?>
 

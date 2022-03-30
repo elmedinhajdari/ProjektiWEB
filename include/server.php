@@ -135,31 +135,6 @@ if (isset($_POST['login_user'])) {
 
 
 
-  //-------------------------------------------------- Job application -------------------------------------------------------------------------------
-
-if(isset($_POST['insert']))
-{
-  $name = $_POST['name'];
-  $surename = $_POST['surename'];
-  $phone = $_POST['phone'];
-  $city = $_POST['city'];
-
-  $query = "INSERT INTO jobapplication (name, surename, email, phone, city) VALUES ('$name' , '$surename', '$email', '$phone', '$city')";
-  $query_run = mysqli_query($db, $query);
-
-  if($query_run){
-
-    echo '<script type="text/javascript"> alert("Data Saved");</script>';
-
-  }else{
-    echo '<script type="text/javascript"> alert("Data not Saved");</script>';
-  }
-  
-}
-
-
-
-
 
 //--------------------------------------------------- EDIT USERS ------------------------------------------------------------------------------------
 if(isset($_GET['removeuser'])){
@@ -215,4 +190,44 @@ if(isset($_POST['update_product'])){
 
 
 
-?>
+
+
+
+
+
+
+// Uploads files
+if (isset($_POST['save'])) {  
+
+  $filename = $_FILES['myfile']['name'];
+
+    // destination of the file on the server
+    $destination = 'uploads/' . $filename;
+
+    // get the file extension
+    $extension = pathinfo($filename, PATHINFO_EXTENSION);
+
+    // the physical file on a temporary uploads directory on the server
+
+    $surename = $_POST['surename'];
+    $phone = $_POST['phone'];
+    $city = $_POST['city'];
+    $file = $_FILES['myfile']['tmp_name'];
+    $size = $_FILES['myfile']['size'];
+
+    if (!in_array($extension, ['pdf', 'docx'])) {
+        echo "You file extension must be .zip, .pdf or .docx";
+    } elseif ($_FILES['myfile']['size'] > 1000000) { // file shouldn't be larger than 1Megabyte
+        echo "File too large!";
+    } else {
+        // move the uploaded (temporary) file to the specified destination
+        if (move_uploaded_file($file, $destination)) {
+            $sql = "INSERT INTO jobapplication (name, surename, email, phone, city, name, size) VALUES ('$username' , '$surename', '$email', '$phone', '$city', '$filename', $size)";
+            if (mysqli_query($db, $sql)) {
+                echo "File uploaded successfully";
+            }
+        } else {
+            echo "Failed to upload file.";
+        }
+    }
+}

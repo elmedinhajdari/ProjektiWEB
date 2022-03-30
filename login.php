@@ -1,4 +1,4 @@
-<?php include('server.php') ?>
+<?php include('include/server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +16,7 @@
 
 <body style="background-image: url('./images/test5.jpg')">
 
-<?php include('include/header.php')  ?>
+<?php include('./include/header.php')  ?>
 
     <!-- Showcase -->
     <section class="showcase2">
@@ -37,7 +37,7 @@
 
         <h2>Login</h2>
         <form method="post" action="login.php">
-            <?php include('errors.php');?>
+            <?php include('./include/errors.php');?>
             <div class="form-control">
                 <input id="e" type="text" name="username" placeholder="Username" required>
             </div>

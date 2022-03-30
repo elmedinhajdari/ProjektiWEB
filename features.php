@@ -1,7 +1,7 @@
-<?php include('server.php');
-include('include/logout.php');
- include('errors.php');
- ?>
+<?php include('./include/server.php');
+include('./include/logout.php');
+include('./include/errors.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,9 +10,7 @@ include('include/logout.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/utilities.css">
     <title>BuzzHosting | Internet Hosting</title>
@@ -20,7 +18,7 @@ include('include/logout.php');
 
 <body>
 
-<?php include('include/header.php')  ?>
+    <?php include('include/header.php')  ?>
 
 
     <!--Head-->
@@ -34,22 +32,22 @@ include('include/logout.php');
         </div>
     </section>
 
-        <!-- Sub head -->
-        <section class="features-sub-head bg-light py-3">
-            <div class="container grid">
-                <div>
-                    <h1 class="md">Buzz Hosting</h1>
-                    <p>
-                        Our servers are the best in the world, top quality and efficient.
-                    </p>
-                </div>
-                <img src="images/server2.png" alt="">
+    <!-- Sub head -->
+    <section class="features-sub-head bg-light py-3">
+        <div class="container grid">
+            <div>
+                <h1 class="md">Buzz Hosting</h1>
+                <p>
+                    Our servers are the best in the world, top quality and efficient.
+                </p>
             </div>
-        </section>
+            <img src="images/server2.png" alt="">
+        </div>
+    </section>
 
     <!--Bottom-->
 
-    <section  class="features-main my-2">
+    <section class="features-main my-2">
         <div class="container grid grid-3">
             <div class="card flex">
                 <i class="fas fa-server fa-3x"></i>
@@ -90,13 +88,13 @@ include('include/logout.php');
 
     <!--Languages-->
     <section class="languages">
-        
+
         <h2 class="md text-center my-2">
             Supported languages
         </h2>
-        
+
         <div onclick="plusSlides(1)" class="container flex">
-            
+
             <div class="card hover2 mySlides">
                 <h4>Node.js</h4>
                 <img src="images/logos/node.png" alt="">
@@ -124,9 +122,9 @@ include('include/logout.php');
             <div class="card hover2  mySlides ">
                 <h4>Clojure</h4>
                 <img src="images/logos/clojure.png" alt="">
-                
+
             </div>
-            
+
         </div>
 
 
@@ -138,4 +136,5 @@ include('include/logout.php');
 
 
 </body>
+
 </html>

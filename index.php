@@ -1,5 +1,5 @@
-<?php include('server.php');
-include('include/logout.php');
+<?php include('./include/server.php');
+include('./include/logout.php');
 ?>
 
 
@@ -19,7 +19,7 @@ include('include/logout.php');
 </head>
 
 <body>
-    <?php include('include/header.php')  ?>
+    <?php include('./include/header.php')  ?>
 
 
 
@@ -39,48 +39,46 @@ include('include/logout.php');
 
             <div class="showcase-form card">
 
-                <?php include('errors.php'); ?>
+                <?php include('./include/errors.php'); ?>
                 <form method="post" action="index.php">
 
 
-                
+
                     <?php if (isset($_SESSION['usertype']) && $_SESSION['usertype'] == 'user') {
-                        
+
                     ?>
-                    
+
                         <h2>User panel</h2>
 
                         <div class="form-controls">
-                        <p>Welcome, <strong><?php echo $username=$_SESSION['username'];?></strong></p>
+                            <p>Welcome, <strong><?php echo $username = $_SESSION['username']; ?></strong></p>
                             <a>We are currently looking for people to work with us!</a>
-                            
-                            </div>
-                            <div  class="blockers2">
-                        <a href="job.php" class="btn btn-primary">Apply for a job!</a>
-                        <a href="job.php" class="btn btn-primary">Order list!</a>
-                            </div>
 
-                    <?php  }
-                    
-                    else if (isset($_SESSION['usertype']) && $_SESSION['usertype'] == 'admin') { ?>
-                     
+                        </div>
+                        <div class="blockers2">
+                            <a href="job.php" class="btn btn-primary">Apply for a job!</a>
+                            <a href="job.php" class="btn btn-primary">Order list!</a>
+                        </div>
+
+                    <?php  } else if (isset($_SESSION['usertype']) && $_SESSION['usertype'] == 'admin') { ?>
+
 
 
 
 
                         <h2>Admin panel</h2>
-                        <p>Welcome, <strong><?php echo $username=$_SESSION['username'];?></strong></p>
+                        <p>Welcome, <strong><?php echo $username = $_SESSION['username']; ?></strong></p>
 
                         <div class="blockers">
-                        <a href="adminpanel.php" class="btn text-light ">User list</a>
-                        <a href="adminpanelproducts.php" class="btn text-light ">Product List</a>
-                        <a href="adminpanel.php" class="btn text-light ">CV list</a>
-                        <a href="adminpanel.php" class="btn text-light ">Order list</a>
+                            <a href="adminpanel.php" class="btn text-light ">User list</a>
+                            <a href="adminpanelproducts.php" class="btn text-light ">Product List</a>
+                            <a href="adminpanel.php" class="btn text-light ">CV list</a>
+                            <a href="adminpanel.php" class="btn text-light ">Order list</a>
                         </div>
 
-                       
-                        
-                        
+
+
+
                     <?php } else if (!(isset($_SESSION['usertype']))) { ?>
                         <h2>Register</h2>
                         <div class="form-control">
@@ -98,94 +96,82 @@ include('include/logout.php');
                         <input type="submit" name="register" value="Register" class="btn btn-primary">
                     <?php } ?>
                 </form>
-
-
-
-
-
             </div>
         </div>
-        
     </section>
 
 
-    <div style="background-image: url('./images/test6.jpg');" >
-    <!-- Stats -->
-    <div class="between">
-        <section  class="stats">
-            <div class="container">
-                <h3 class="stats-heading text-center my-1">
-                    This is our most recent work,<br>with modern architecture and
-                    scaling
-                </h3>
-                <div class="grid grid-3 text-center my-4">
-                    <div>
-                        <i class="fas fa-user fa-3x"></i>
-                        <h3><?php $count = mysqli_query($db, "SELECT * FROM users");
-                            $data = mysqli_num_rows($count);
-                            echo $data ?></h3>
-                        <p class="text-secondary ">Clients</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-city fa-3x"></i>
-                        <h3>92</h3>
-                        <p class="text-secondary ">Cities</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-project-diagram fa-3x"></i>
-                        <h3>2,349,555</h3>
-                        <p class="text-secondary">Projects</p>
-                    </div>
 
-                </div>
-            </div>
-        </section>
-
-        <!--CLI-->
-        <section  class="cli">
-            <div class="container grid text-center ">
-
-
-                <?php $select_product = mysqli_query($db, "SELECT * FROM produktet") or die('query failed'); ?>
-                <?php if (mysqli_num_rows($select_product) > 0) {
-                    while ($fetch_product = mysqli_fetch_assoc($select_product)) {
-
-
-                ?>        
-                           
-                        <div class="card hover1">
-
-                            <h3><?php echo $fetch_product['oferta']; ?></h3>
-                            <h1 class="test1"><?php echo $fetch_product['qmimi']; ?>€/Month</h1>
-                            <ul>
-                                <li><?php echo $fetch_product['kanalet']; ?></li>
-                                <li class="underline"></li>
-                                <li><?php echo $fetch_product['reseiver']; ?></li>
-                                <li class="underline"></li>
-                                <li><?php echo $fetch_product['download']; ?></li>
-                                <li class="underline"></li>
-                                <li><?php echo $fetch_product['upload']; ?></li>
-                                <li class="underline"></li>
-                                <li><?php echo $fetch_product['support']; ?></li>
-                              
-                            </ul>
-                            <a href="javascript:void(0);">
-                                <h1 class="order">Order now</h1>
-                            </a>
-                            
+    <div style="background-image: url('./images/test6.jpg');">
+        <!-- Stats -->
+        <div class="between">
+            <section class="stats">
+                <div class="container">
+                    <h3 class="stats-heading text-center my-1">
+                        This is our most recent work,<br>with modern architecture and
+                        scaling
+                    </h3>
+                    <div class="grid grid-3 text-center my-4">
+                        <div>
+                            <i class="fas fa-user fa-3x"></i>
+                            <h3><?php $count = mysqli_query($db, "SELECT * FROM users");
+                                $data = mysqli_num_rows($count);
+                                echo $data ?></h3>
+                            <p class="text-secondary ">Clients</p>
                         </div>
-                    
-                        <?php }
-                        } ?>
-                <div class="py-3"></div>
+                        <div>
+                            <i class="fas fa-city fa-3x"></i>
+                            <h3>92</h3>
+                            <p class="text-secondary ">Cities</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-project-diagram fa-3x"></i>
+                            <h3>2,349,555</h3>
+                            <p class="text-secondary">Projects</p>
+                        </div>
 
-            </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!--CLI-->
+            <section class="cli">
+                <div class="container grid text-center ">
+                    <?php $select_product = mysqli_query($db, "SELECT * FROM produktet") or die('query failed'); ?>
+                    <?php if (mysqli_num_rows($select_product) > 0) {
+                        while ($fetch_product = mysqli_fetch_assoc($select_product)) {
+                    ?>
+                            <div class="card hover1">
+
+                                <h3><?php echo $fetch_product['oferta']; ?></h3>
+                                <h1 class="test1"><?php echo $fetch_product['qmimi']; ?>€/Month</h1>
+                                <ul>
+                                    <li><?php echo $fetch_product['kanalet']; ?></li>
+                                    <li class="underline"></li>
+                                    <li><?php echo $fetch_product['reseiver']; ?></li>
+                                    <li class="underline"></li>
+                                    <li><?php echo $fetch_product['download']; ?></li>
+                                    <li class="underline"></li>
+                                    <li><?php echo $fetch_product['upload']; ?></li>
+                                    <li class="underline"></li>
+                                    <li><?php echo $fetch_product['support']; ?></li>
+                                </ul>
+                                <a href="javascript:void(0);">
+                                    <h1 class="order">Order now</h1>
+                                </a>
+                            </div>
+                    <?php }
+                    } ?>
+                    <div class="py-3"></div>
+                </div>
+        </div>
+        </section>
     </div>
-    </section>
-    </div>
+
 
     <!--Cloud-->
-                
     <section class="cloud bg-primary ">
         <div class="container grid">
             <div class="text-center">
@@ -200,9 +186,6 @@ include('include/logout.php');
 
 
     <?php include('include/footer.php')  ?>
-
-
-
     <script src="js/script.js"></script>
 </body>
 

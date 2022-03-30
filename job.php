@@ -1,4 +1,4 @@
-<?php include('server.php');
+<?php include('./include/server.php');
 include('./include/logout.php');
 ?>
 
@@ -19,45 +19,44 @@ include('./include/logout.php');
 <body style="background-image: url('./images/test.jpg');">
 
 
-<?php include('include/header.php')  ?>
- 
+  <?php include('./include/header.php')  ?>
 
 
 
-<div class="jobap py-5">
+
+  <div class="jobap py-5">
     <div class=" login showcase-form card ">
-      <form action="" method="POST">
-      <center>
-    <h1>Job applcation</h1>
-   </center>
+      <form action="" method="POST" enctype="multipart/form-data">
+        <center>
+          <h1>Job applcation</h1>
+        </center>
 
-   <div class="form-controls">
-        <label> Name: </label>
-        <input type="text" name="name" placeholder="Enter your name" />
-   </div>
-   <div class="form-controls">
-        <label> Surename: </label>
-        <input type="text" name="surename" placeholder="Enter your surename" />
-   </div>
-   <div class="form-controls">
-        <label> Email: </label>
-        <input type="email" name="email" placeholder="Enter your Email" />
+        <div class="form-controls">
+          <label> Name: </label>
+          <input type="text" name="name1" placeholder="Enter your name"/>
         </div>
         <div class="form-controls">
-        <label> Phone: </label>
-        <input type="text" name="phone" placeholder="Enter your phone number" />
+          <label> Surename: </label>
+          <input type="text" name="surename" placeholder="Enter your surename" />
         </div>
         <div class="form-controls">
-        <label> City: </label>
-        <input type="text" name="city" placeholder="Enter your city" />
+          <label> Email: </label>
+          <input type="email" name="email" placeholder="Enter your Email" />
         </div>
-
-
-        <input type="submit" name="insert" class="btn btn-primary" value="Apply!" />
+        <div class="form-controls">
+          <label> Phone: </label>
+          <input type="text" name="phone" placeholder="Enter your phone number" />
+        </div>
+        <div class="form-controls">
+          <label> City: </label>
+          <input type="text" name="city" placeholder="Enter your city" />
+        </div>
+        <input type="file" name="myfile"> <br><br>
+        <input type="submit" name="save" class="btn btn-primary" value="Apply!" />
 
       </form>
-      </div>
     </div>
+  </div>
   <div class="my-5 py-4">
 
   </div>
