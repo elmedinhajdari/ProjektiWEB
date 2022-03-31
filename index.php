@@ -74,6 +74,8 @@ include('./include/logout.php');
                             <a href="adminpanelproducts.php" class="btn text-light ">Product List</a>
                             <a href="apcvlist.php" class="btn text-light ">CV list</a>
                             <a href="aporderlist.php" class="btn text-light ">Order list</a>
+                            <a href="job.php" class="btn btn-primary">Apply for a job!</a>
+                            <a href="orderlist.php" class="btn btn-primary">Order list!</a>
                         </div>
 
 

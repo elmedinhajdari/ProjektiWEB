@@ -230,7 +230,7 @@ img{
 
 .blockers {
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 3fr);
     gap: 10px;
 }
 
