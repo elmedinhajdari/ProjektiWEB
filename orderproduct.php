@@ -36,7 +36,7 @@ if (!isset($_SESSION['username'])) {
                 <center>
                     <h1>Checkout:</h1>
                 </center>
-                <?php include('./include/errors.php'); ?>
+                
                 <div class="form-controls">
                     <label> Username: </label>
                     <input  onkeydown="return false"  type="text" name="username2" value="<?php echo $_SESSION['username']; ?>" placeholder="<?php echo $_SESSION['username']; ?>" />
