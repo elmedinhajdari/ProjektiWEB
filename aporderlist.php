@@ -30,38 +30,41 @@ if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] == 'user') {
 
         <div class="card panel m-1 text-center ">
             <center class="my-1">
-                <h2>All CV Lists </h2>
+                <h2>All Orders </h2>
             </center>
             <table class="m-2 customers">
                 <thead>
                     <th>id</th>
+                    <th>Username</th>
                     <th>Name</th>
                     <th>Surename</th>
+                    <th>Email</th>
                     <th>Phone</th>
                     <th>City</th>
-                    <th>Job Position</th>
-                    <th>File name</th>
-                    <th>Size</th>
+                    <th>Address</th>
+                    <th>Product</th>
                     <th colspan="2">action</th>
 
                 </thead>
                 <tbody>
-                    <?php $reg_cv = mysqli_query($db, "SELECT * FROM `files`") or die('query failed');
+                    <?php $reg_cv = mysqli_query($db, "SELECT * FROM `orderlist`") or die('query failed');
                     if (mysqli_num_rows($reg_cv) > 0) {
                         while ($fetch_cv = mysqli_fetch_assoc($reg_cv)) { ?>
                             <tr>
                                 <td><?php echo $fetch_cv['id']; ?></td>
-                                <td><?php echo $fetch_cv['name1']; ?></td>
-                                <td><?php echo $fetch_cv['surename']; ?></td>
-                                <td><?php echo $fetch_cv['phone']; ?></td>
-                                <td><?php echo $fetch_cv['city']; ?></td>
-                                <td><?php echo $fetch_cv['jobtitle']; ?></td>
-                                <td><?php echo $fetch_cv['name']; ?></td>
-                                <td><?php echo $fetch_cv['size']; ?></td>
+                                <td><?php echo $fetch_cv['username2']; ?></td>
+                                <td><?php echo $fetch_cv['name2']; ?></td>
+                                <td><?php echo $fetch_cv['surename2']; ?></td>
+                                <td><?php echo $fetch_cv['email2']; ?></td>
+                                <td><?php echo $fetch_cv['phone2']; ?></td>
+                                <td><?php echo $fetch_cv['city2']; ?></td>
+                                <td><?php echo $fetch_cv['address2']; ?></td>
+                                <td><?php echo $fetch_cv['product2']; ?></td>
 
 
-                                <td><a href="apcvlist.php?removecv=<?php echo $fetch_cv['id']; ?>" class="btn-delete" onclick="return confirm('remove CV from database?');">Delete</a></td>
-                                <td><a href="apcvlist.php?file_id=<?php echo $fetch_cv['id'] ?>" class="btn-save">Download</a></td>
+
+                                <td><a href="aporderlist.php?removeorder=<?php echo $fetch_cv['id']; ?>" class="btn-delete" onclick="return confirm('remove order?');">Delete</a></td>
+
                             </tr>
                     <?php }
                     } ?>

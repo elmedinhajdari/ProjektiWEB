@@ -533,13 +533,13 @@ img{
     display: flex;
     justify-content: center;
     
- 
 }
 
 
  .form-controls{
     margin: 20px 0;
 }
+
 
 
 .customers td, .customers th {
@@ -571,5 +571,8 @@ img{
 
 
 
-
-  
+.jobps{
+    width: 100%;
+    border-radius: 05px;
+    padding: 10px 15px 10px 15px;
+}

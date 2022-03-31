@@ -24,7 +24,6 @@ if (isset($_POST['register'])) {
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
  
-//Admin/User
 
 
 
@@ -215,6 +214,7 @@ if (isset($_POST['save'])) { // if save button on the form is clicked
   $email=$_POST['email'];
   $phone=$_POST['phone'];
   $city=$_POST['city'];
+  $jobtitle=$_POST['jobtitle'];
   $file = $_FILES['myfile']['tmp_name'];
   $size = $_FILES['myfile']['size'];
 
@@ -225,8 +225,8 @@ if (isset($_POST['save'])) { // if save button on the form is clicked
   } else {
       
       if (move_uploaded_file($file, $destination)) {
-        $sql = "INSERT INTO files (name1, surename, email, phone, city, name, size) VALUES
-        ('$name1', '$surename', '$email', '$phone', '$city', '$filename', '$size')";
+        $sql = "INSERT INTO files (name1, surename, email, phone, city, jobtitle, name, size) VALUES
+        ('$name1', '$surename', '$email', '$phone', '$city', '$jobtitle' , '$filename', '$size')";
           if (mysqli_query($db, $sql)) {
             array_push($errors, "File uploaded successfully");
           }
@@ -235,6 +235,9 @@ if (isset($_POST['save'])) { // if save button on the form is clicked
       }
   }
 }
+
+
+
 
 // Downloads files
 if (isset($_GET['file_id'])) {
@@ -268,6 +271,68 @@ if(isset($_GET['removecv'])){
   $id=$_GET['removecv'];
 
   $sql="delete from `files` where id='$id'";
+  $result=mysqli_query($db,$sql);
+
+}
+
+
+
+
+
+
+
+if (isset($_POST['ordernow'])) { 
+
+
+  $username2=$_POST['username2'];
+  $name2=$_POST['name2'];
+  $surename2=$_POST['surename2'];
+  $email2=$_POST['email2'];
+  $phone2=$_POST['phone2'];
+  $city2=$_POST['city2'];
+  $address2=$_POST['address2'];
+  $product2=$_POST['product2'];
+
+
+
+ $product_check_query = "SELECT * FROM orderlist WHERE username2='$username2' LIMIT 1";
+ $result1 = mysqli_query($db, $product_check_query);
+ $product = mysqli_fetch_assoc($result1);
+
+   
+   if ($product) { 
+    if ($product['username2'] === $username2 ) {
+      array_push($errors, "You've already ordered once.");
+    }
+  }else{
+
+      $sql = "INSERT INTO orderlist (username2, name2, surename2, email2, phone2, city2, address2, product2) VALUES
+        ('$username2', '$name2', '$surename2', '$email2', '$phone2', '$city2', '$address2', '$product2')";
+          if ($db->query($sql) === TRUE) {
+  
+          } 
+  }
+
+
+
+  function getProductById($id){
+    global $db;
+    $query = "SELECT * FROM products WHERE id=" . $id;
+    $result1 = mysqli_query($db, $query);
+  
+    $product = mysqli_fetch_assoc($result1);
+    return $product;
+}
+
+
+
+}
+
+
+if(isset($_GET['removeorder'])){
+  $id=$_GET['removeorder'];
+
+  $sql="delete from `orderlist` where id='$id'";
   $result=mysqli_query($db,$sql);
 
 }

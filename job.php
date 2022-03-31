@@ -51,8 +51,19 @@ include('./include/logout.php');
           <label> City: </label>
           <input type="text" name="city" placeholder="Enter your city" />
         </div>
-        <input type="file" name="myfile" value="Upload CV!"> <br><br>
-        <input type="submit" name="save" class="btn btn-primary" value="Apply!" />
+
+
+        <label>Position:</label>
+          <select class="jobps" name="jobtitle">
+          <option value="Manager">Manager</option>
+          <option value="Software Engineer">Software Engineer</option>
+          <option value="Data analyst">Data analyst</option>
+          </select>
+          <div class="form-controls">
+          <label >Upload ur CV:</label>
+           <input type="file" name="myfile" value="Upload CV!"> 
+        </div>
+         <input type="submit" name="save" class="btn btn-primary" value="Apply!" />
 
       </form>
     </div>

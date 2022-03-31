@@ -57,7 +57,7 @@ include('./include/logout.php');
                         </div>
                         <div class="blockers2">
                             <a href="job.php" class="btn btn-primary">Apply for a job!</a>
-                            <a href="job.php" class="btn btn-primary">Order list!</a>
+                            <a href="orderlist.php" class="btn btn-primary">Order list!</a>
                         </div>
 
                     <?php  } else if (isset($_SESSION['usertype']) && $_SESSION['usertype'] == 'admin') { ?>
@@ -73,7 +73,7 @@ include('./include/logout.php');
                             <a href="adminpanel.php" class="btn text-light ">User list</a>
                             <a href="adminpanelproducts.php" class="btn text-light ">Product List</a>
                             <a href="apcvlist.php" class="btn text-light ">CV list</a>
-                            <a href="adminpanel.php" class="btn text-light ">Order list</a>
+                            <a href="aporderlist.php" class="btn text-light ">Order list</a>
                         </div>
 
 
@@ -158,7 +158,7 @@ include('./include/logout.php');
                                     <li class="underline"></li>
                                     <li><?php echo $fetch_product['support']; ?></li>
                                 </ul>
-                                <a href="javascript:void(0);">
+                                <a href="orderproduct.php">
                                     <h1 class="order">Order now</h1>
                                 </a>
                             </div>
