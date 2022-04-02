@@ -27,12 +27,6 @@ if (isset($_POST['register'])) {
 
 
 
-  // Forma e validimit
-  if (empty($username) || empty($email) || empty($password_1))  { array_push($errors, "You're missing something.."); }
-
-  if ($password_1 != $password_2) {
-	array_push($errors, "The two passwords do not match");
-  }
 
   
 
@@ -46,14 +40,27 @@ if (isset($_POST['register'])) {
 
 
  
-  
-  
-  //nese useri egziston
-  if ($user) { 
-    if ($user['username'] === $username || $user['email'] === $email ) {
-      array_push($errors, "Username/Email already exists");
+    if($user){
+    if ($user['username'] === $username) {
+      array_push($errors, "Username already exists");
+    }
+    else if($user['email'] === $email){
+      array_push($errors, "Email already exists");
     }
   }
+    else if (strlen($username) < 6 || preg_match('/\s/', $username))  
+    { 
+    array_push($errors, "Username must be at least 6 characters"); 
+    }
+    else if(strlen($password_1) < 6 || preg_match('/\s/', $password_1))  
+    {
+      array_push($errors, "Password must be at least 6 characters"); 
+    }
+    else if ($password_1 != $password_2) {
+    array_push($errors, "The two passwords do not match");
+    }
+  
+
 
 
 
@@ -97,7 +104,7 @@ if (isset($_POST['login_user'])) {
     if (empty($username)) {
         array_push($errors, "Username is required");
     }
-    if (empty($password)) {
+    else if (empty($password)) {
         array_push($errors, "Password is required");
     }
   
@@ -299,6 +306,8 @@ if (isset($_POST['ordernow'])) {
  $result1 = mysqli_query($db, $product_check_query);
  $product = mysqli_fetch_assoc($result1);
 
+
+
    
    if ($product) { 
     if ($product['username2'] === $username2 ) {
@@ -313,6 +322,8 @@ if (isset($_POST['ordernow'])) {
           } 
   }
 
+
+ 
 
 
   function getProductById($id){

@@ -28,28 +28,28 @@ include('./include/logout.php');
     <div class=" login showcase-form card ">
       <form action="" method="POST" enctype="multipart/form-data">
         <center>
-          <h1>Job applcation</h1>
+          <h1>Job application</h1>
         </center>
         <?php include('./include/errors.php'); ?>
         <div class="form-controls">
           <label> Name: </label>
-          <input type="text" name="name1" placeholder="Enter your name"/>
+          <input type="text" required name="name1" placeholder="Enter your name"/>
         </div>
         <div class="form-controls">
           <label> Surename: </label>
-          <input type="text" name="surename" placeholder="Enter your surename" />
+          <input type="text" required name="surename" placeholder="Enter your surename" />
         </div>
         <div class="form-controls">
           <label> Email: </label>
-          <input type="email" name="email" placeholder="Enter your Email" />
+          <input type="email" required name="email" placeholder="Enter your Email" />
         </div>
         <div class="form-controls">
           <label> Phone: </label>
-          <input type="text" name="phone" placeholder="Enter your phone number" />
+          <input type="text" required name="phone"  placeholder="Enter your phone number" />
         </div>
         <div class="form-controls">
           <label> City: </label>
-          <input type="text" name="city" placeholder="Enter your city" />
+          <input type="text" required name="city" placeholder="Enter your city" />
         </div>
 
 

@@ -31,6 +31,7 @@ if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] == 'user') {
         <div class="card panel m-1 text-center ">
             <center class="my-1">
                 <h2>All Orders </h2>
+                <?php include('./include/adminnav.php')  ?>
             </center>
             <table class="m-2 customers">
                 <thead>

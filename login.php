@@ -34,15 +34,16 @@
 <div class="login py-5 my-5">
 
     <div class="showcase-form card">
-
-        <h2>Login</h2>
+           
+        <h2 class="text-center">Login</h2>
+        <?php include('./include/errors.php');?>
         <form method="post" action="login.php">
-            <?php include('./include/errors.php');?>
+
             <div class="form-control">
-                <input id="e" type="text" name="username" placeholder="Username" required>
+                <input id="e" required type="text" name="username" placeholder="Username" required>
             </div>
             <div class="form-control">
-                <input id="p" type="password" name="password" placeholder="Password" required>
+                <input id="p" required type="password" name="password" placeholder="Password" required>
             </div>
             <input name="login_user" type="submit" value="Login" class="btn btn-primary">
         </form>

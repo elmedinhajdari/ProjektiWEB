@@ -163,7 +163,11 @@ img{
 }
 
 
-
+.error{
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}
 
 .showcase-form .form-control{
     margin: 30px 0;

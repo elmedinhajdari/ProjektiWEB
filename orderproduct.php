@@ -43,27 +43,27 @@ if (!isset($_SESSION['username'])) {
                 </div>
                 <div class="form-controls">
                     <label> Name: </label>
-                    <input type="text" name="name2" placeholder="Enter your name" />
+                    <input type="text" required name="name2" placeholder="Enter your name"/>
                 </div>
                 <div class="form-controls">
                     <label> Surename: </label>
-                    <input type="text" name="surename2" placeholder="Enter your surename" />
+                    <input type="text" required name="surename2" placeholder="Enter your surename" />
                 </div>
                 <div class="form-controls">
                     <label> Email: </label>
-                    <input type="email" name="email2" placeholder="Enter your Email" />
+                    <input type="email" required name="email2" placeholder="Enter your Email" />
                 </div>
                 <div class="form-controls">
                     <label> Phone: </label>
-                    <input type="text" name="phone2" placeholder="Enter your phone number" />
+                    <input type="text"  required name="phone2" placeholder="Enter your phone number" />
                 </div>
                 <div class="form-controls">
                     <label> City: </label>
-                    <input type="text" name="city2" placeholder="Enter your city" />
+                    <input type="text" required name="city2" placeholder="Enter your city" />
                 </div>
                 <div class="form-controls">
                     <label> Address: </label>
-                    <input type="text" name="address2" placeholder="Enter your address" />
+                    <input type="text" required name="address2" placeholder="Enter your address" />
                 </div>
 
                 <div class="form-controls">

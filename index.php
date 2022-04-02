@@ -39,7 +39,7 @@ include('./include/logout.php');
 
             <div class="showcase-form card">
 
-                <?php include('./include/errors.php'); ?>
+                
                 <form method="post" action="index.php">
 
 
@@ -82,18 +82,19 @@ include('./include/logout.php');
 
 
                     <?php } else if (!(isset($_SESSION['usertype']))) { ?>
-                        <h2>Register</h2>
+                        <h2 class="text-center">Register</h2>
+                        <?php include('./include/errors.php'); ?>
                         <div class="form-control">
-                            <input type="text" name="username" value="<?php echo $username; ?>" placeholder="Username">
+                            <input type="text" required name="username" value="<?php echo $username; ?>" placeholder="Username">
                         </div>
                         <div class="form-control">
-                            <input type="text" name="email" value="<?php echo $email; ?>" placeholder="Email">
+                            <input type="text" required name="email" value="<?php echo $email; ?>" placeholder="Email">
                         </div>
                         <div class="form-control">
-                            <input type="password" name="password_1" placeholder="Password">
+                            <input type="password" required name="password_1" placeholder="Password">
                         </div>
                         <div class="form-control">
-                            <input type="password" name="password_2" placeholder="Confirm Password">
+                            <input type="password" required name="password_2" placeholder="Confirm Password">
                         </div>
                         <input type="submit" name="register" value="Register" class="btn btn-primary">
                     <?php } ?>

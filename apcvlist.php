@@ -21,7 +21,7 @@ if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] == 'user') {
 </head>
 
 <body style="background-image: url('./images/apanel.png');">
-    <?php include('./include/header.php')  ?>
+<?php include('./include/header.php')  ?>
 
 
 
@@ -31,7 +31,10 @@ if (!isset($_SESSION['usertype']) || $_SESSION['usertype'] == 'user') {
         <div class="card panel m-1 text-center ">
             <center class="my-1">
                 <h2>All CV Lists </h2>
+                <?php include('./include/adminnav.php')  ?>
             </center>
+       
+
             <table class="m-2 customers">
                 <thead>
                     <th>id</th>
