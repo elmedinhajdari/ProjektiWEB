@@ -58,11 +58,21 @@ img{
 
 }
 
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+
 .navbar{
     background-color: var(--primary-color);
     color: #fff;
     height: 70px;
     
+}
+
+.white{
+    color: white;
 }
 
 .colorred{
@@ -580,3 +590,25 @@ img{
     border-radius: 05px;
     padding: 10px 15px 10px 15px;
 }
+
+
+
+    input:invalid{
+        animation: shake 300ms;
+    }
+    @keyframes shake{
+        25% { transform: translateX(4px);}
+        50% {transform: translateX(-4px);}
+        70% { transform: translateX(4px);}
+
+    }
+
+
+
+    .fixed{
+        position:fixed;
+        top:0;
+     }
+     .fixed + .sample-content{
+        padding-top: 60px;
+     }

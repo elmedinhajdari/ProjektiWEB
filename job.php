@@ -61,7 +61,7 @@ include('./include/logout.php');
           </select>
           <div class="form-controls">
           <label >Upload ur CV:</label>
-           <input type="file" name="myfile" value="Upload CV!"> 
+           <input type="file" required name="myfile" value="Upload CV!"> 
         </div>
          <input type="submit" name="save" class="btn btn-primary" value="Apply!" />
 

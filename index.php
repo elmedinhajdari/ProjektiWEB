@@ -84,11 +84,11 @@ include('./include/logout.php');
                     <?php } else if (!(isset($_SESSION['usertype']))) { ?>
                         <h2 class="text-center">Register</h2>
                         <?php include('./include/errors.php'); ?>
-                        <div class="form-control">
-                            <input type="text" required name="username" value="<?php echo $username; ?>" placeholder="Username">
+                        <div class="form-control wtft">
+                            <input type="text" required name="username"  value="<?php echo $username; ?>" placeholder="Username">
                         </div>
                         <div class="form-control">
-                            <input type="text" required name="email" value="<?php echo $email; ?>" placeholder="Email">
+                            <input type="text" required name="email"  value="<?php echo $email; ?>" placeholder="Email">
                         </div>
                         <div class="form-control">
                             <input type="password" required name="password_1" placeholder="Password">
@@ -105,18 +105,18 @@ include('./include/logout.php');
 
 
 
-    <div style="background-image: url('./images/test6.jpg');">
+    <div style="background-image: url('./images/tv.jpg');">
         <!-- Stats -->
         <div class="between">
             <section class="stats">
                 <div class="container">
-                    <h3 class="stats-heading text-center my-1">
+                    <h3 class="stats-heading text-center my-1 white">
                         This is our most recent work,<br>with modern architecture and
                         scaling
                     </h3>
-                    <div class="grid grid-3 text-center my-4">
+                    <div class="grid grid-3 text-center white my-4">
                         <div>
-                            <i class="fas fa-user fa-3x"></i>
+                            <i class="fas fa-user  fa-3x"></i>
                             <h3><?php $count = mysqli_query($db, "SELECT * FROM users");
                                 $data = mysqli_num_rows($count);
                                 echo $data ?></h3>

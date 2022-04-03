@@ -48,9 +48,9 @@ include('./include/errors.php');
                 <h3 class="my-2">Apply for a job</h3>
                 <nav>
                     <ul>
-                        <li><a href="#">Apply as a software engineer</a></li>
-                        <li><a href="#">Apply as a manager</a></li>
-                        <li><a href="#">Apply as a data analyst</a></li>
+                        <li><a href="job.php">Apply as a software engineer</a></li>
+                        <li><a href="job.php">Apply as a manager</a></li>
+                        <li><a href="job.php">Apply as a data analyst</a></li>
                     </ul>
                 </nav>
             </div>

@@ -51,7 +51,7 @@ if (!isset($_SESSION['username'])) {
                 </div>
                 <div class="form-controls">
                     <label> Email: </label>
-                    <input type="email" required name="email2" placeholder="Enter your Email" />
+                    <input type="email" required name="email2" placeholder="Enter your email" />
                 </div>
                 <div class="form-controls">
                     <label> Phone: </label>
