@@ -157,12 +157,15 @@ img{
 
 .showcase-form{
     position: relative;
-    top: 60px;
+    top: 90px;
     width: 400px;
     padding: 40px;
     justify-self: flex-end;
     z-index: 100;
 }
+
+
+
 
 
 .error{
