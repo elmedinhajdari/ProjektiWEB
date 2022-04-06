@@ -442,8 +442,9 @@ img{
 
     .cli .grid{
         
-       
+        grid-template-columns: repeat(1, 1fr);
         justify-items: center;
+
        
 
     }
@@ -498,7 +499,7 @@ img{
 
 .cli .card{
     grid-template-columns: repeat(1, 1fr);
-        width: 50%;
+      
        
 
 }
