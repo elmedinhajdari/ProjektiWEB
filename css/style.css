@@ -179,6 +179,7 @@ img{
 }
 
 .showcase-form input[type= 'text'],
+.showcase-form input[type= 'number'],
 .showcase-form input[type= 'email'],
 .showcase-form input[type= 'password']{
  border: 0;
@@ -573,10 +574,15 @@ img{
   .customers th{
     
     text-align: center;
+ 
     
   }
 
-
+.success{
+    color: rgb(20, 190, 20);
+    font-weight: bold;
+    text-align: center;
+}
 
 
 
@@ -608,3 +614,16 @@ img{
      .fixed + .sample-content{
         padding-top: 60px;
      }
+
+
+     /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

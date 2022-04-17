@@ -5,6 +5,7 @@ session_start();
 $username = "";
 $email    = "";
 $errors = array(); 
+$success = array();
 
 
 
@@ -235,7 +236,7 @@ if (isset($_POST['save'])) { // if save button on the form is clicked
         $sql = "INSERT INTO files (name1, surename, email, phone, city, jobtitle, name, size) VALUES
         ('$name1', '$surename', '$email', '$phone', '$city', '$jobtitle' , '$filename', '$size')";
           if (mysqli_query($db, $sql)) {
-            array_push($errors, "File uploaded successfully");
+            array_push($success, "CV uploaded successfully");
           }
       } else {
         array_push($errors,"Failed to upload file.");

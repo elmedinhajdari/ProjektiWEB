@@ -31,6 +31,7 @@ include('./include/logout.php');
           <h1>Job application</h1>
         </center>
         <?php include('./include/errors.php'); ?>
+        <?php include('./include/success.php'); ?>
         <div class="form-controls">
           <label> Name: </label>
           <input type="text" required name="name1" placeholder="Enter your name"/>
@@ -45,7 +46,7 @@ include('./include/logout.php');
         </div>
         <div class="form-controls">
           <label> Phone: </label>
-          <input type="text" required name="phone"  placeholder="Enter your phone number" />
+          <input type="number" required name="phone"  placeholder="Enter your phone number" />
         </div>
         <div class="form-controls">
           <label> City: </label>

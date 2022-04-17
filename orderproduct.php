@@ -55,7 +55,7 @@ if (!isset($_SESSION['username'])) {
                 </div>
                 <div class="form-controls">
                     <label> Phone: </label>
-                    <input type="text"  required name="phone2" placeholder="Enter your phone number" />
+                    <input type="number"  required name="phone2" placeholder="Enter your phone number" />
                 </div>
                 <div class="form-controls">
                     <label> City: </label>
